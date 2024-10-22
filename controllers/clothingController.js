@@ -1,4 +1,5 @@
 const Clothing = require("../models/clothing.js")
+const Type = require("../models/type.js")
 
 // get all clothes
 const getAllClothes = async (req, res) => {
@@ -15,7 +16,7 @@ const getAllClothes = async (req, res) => {
   }
 }
 
-// get single clothing by id
+// get a single article of clothing by id
 const getClothingById = async (req, res) => {
   try {
     const clothing = await Clothing.findById(req.params.id)
@@ -32,7 +33,9 @@ const getClothingById = async (req, res) => {
 const getClothesByType = async (req, res) => {
   try {
     const { type } = req.params
-    const clothes = await Clothing.find({ type: type })
+    const clothes = await Clothing.find({
+      type: { $regex: type, $options: "i" }
+    })
     if (!clothes || clothes.length === 0) {
       return res.status(404).json({ message: "No clothes found! Womp womp." })
     }
@@ -42,7 +45,42 @@ const getClothesByType = async (req, res) => {
   }
 }
 
-// create a clothing
+// // get clothes by type category
+// const getClothesByTypeCategory = async (req, res) => {
+//   try {
+//     const { category } = req.params
+//     console.log(category)
+//     console.log(req.params)
+
+//     const clothes = await Clothing.find({
+//       "type.category": { $regex: category, $options: "i" }
+//     })
+//     if (!clothes || clothes.length === 0) {
+//       return res.status(404).json({ message: "No clothes found! Womp womp." })
+//     }
+//     res.json(clothes)
+//   } catch (error) {
+//     res.status(500).json({ message: error.message })
+//   }
+// }
+
+// get clothes by color
+const getClothesByColor = async (req, res) => {
+  try {
+    const { color } = req.params
+    const clothes = await Clothing.find({
+      colors: { $regex: color, $options: "i" }
+    })
+    if (!clothes || clothes.length === 0) {
+      return res.status(404).json({ message: "No clothes found! Womp womp." })
+    }
+    res.json(clothes)
+  } catch (error) {
+    res.status(500).json({ message: error.message })
+  }
+}
+
+// create an article of clothing
 const createClothing = async (req, res) => {
   try {
     const clothing = new Clothing(req.body)
@@ -53,7 +91,7 @@ const createClothing = async (req, res) => {
   }
 }
 
-// update a clothing using id
+// update an article of clothing using id
 const updateClothing = async (req, res) => {
   try {
     let { id } = req.params
@@ -70,7 +108,7 @@ const updateClothing = async (req, res) => {
   }
 }
 
-// delete a clothing using id
+// delete an article of clothing using id
 const deleteClothing = async (req, res) => {
   try {
     const { id } = req.params
@@ -88,6 +126,8 @@ module.exports = {
   getAllClothes,
   getClothingById,
   getClothesByType,
+  getClothesByColor,
+  // getClothesByTypeCategory,
   createClothing,
   updateClothing,
   deleteClothing
