@@ -12,9 +12,13 @@
       href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" type="text/css" href="main.css" />
 
-    <title>Hung Up</title>
+    <title>Hung Up | Outfit Detail Page</title>
   </head>
 
   <body>
@@ -30,9 +34,9 @@
             <!-- ***** logo end ***** -->
             <!-- ***** nav bar start ***** -->
             <ul>
-              <li><a href="#top">My Closet</a></li>
+              <li><a href="index.html">My Closet</a></li>
               <li><a href="clothes.html"></a>Wardrobe</li>
-              <li><a href="outfits.html"></a>Outfits</li>
+              <li><a href="outfits.html" class="active"></a>Outfits</li>
               <li><a href="types.html"></a>Drawers</li>
             </ul>
             <!-- ***** nav bar end ***** -->
@@ -42,63 +46,54 @@
     </header>
     <!-- ***** header end ***** -->
 
-    <!-- ***** main container start ***** -->
-    <div class="main-container">
-      <div class="row">
-        <div class="column-a">
-          <div class="square-image">
-            <div class="inner-content">
-              <h4>Wardrobe</h4>
+    <!-- ***** clothing details start ***** -->
+    <section class="section" id="clothing">
+      <div class="container">
+        <div class="row">
+          <div class="column-8">
+            <div class="left-image">
+              <img src="/assets/image-placeholder.png" />
             </div>
-            <div class="hover-content">
-              <div class="inner">
-                <h4>Wardrobe</h4>
-                <p>All of my clothes in one spot</p>
-                <div class="main-style-button">
-                  <a href="clothes.html">Enter Wardrobe</a>
-                </div>
-              </div>
-            </div>
-            <img src="/assets/image-placeholder.png" />
           </div>
-        </div>
-        <div class="column-a">
-          <div class="square-image">
-            <div class="inner-content">
-              <h4>Outfits</h4>
+          <div class="column-4">
+            <div class="right-content">
+              <h4>Clothing Name</h4>
+              <ul>
+                <li>
+                  <p class="subtype-text">Subtype text</p>
+                  <span>Subtype</span>
+                </li>
+                <li>
+                  <p class="type-text">Type text</p>
+                  <span>Type</span>
+                </li>
+                <li>
+                  <p class="color-text">Color text</p>
+                  <span>Color</span>
+                </li>
+                <li>
+                  <p class="waterproof-icon">
+                    <i class="fa-solid fa-umbrella"></i>
+                  </p>
+                  <span>Waterproof</span>
+                </li>
+                <li>
+                  <ul class="stars ratings">
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                  </ul>
+                  <span>Ratings</span>
+                </li>
+              </ul>
             </div>
-            <div class="hover-content">
-              <div class="inner">
-                <h4>Outfits</h4>
-                <p>All of my styled outfits</p>
-                <div class="main-style-button">
-                  <a href="outfits.html">See Outfits</a>
-                </div>
-              </div>
-            </div>
-            <img src="/assets/image-placeholder.png" />
-          </div>
-        </div>
-        <div class="column-a">
-          <div class="square-image">
-            <div class="inner-content">
-              <h4>Drawers</h4>
-            </div>
-            <div class="hover-content">
-              <div class="inner">
-                <h4>Drawers</h4>
-                <p>My clothes sorted and put away in their drawers</p>
-                <div class="main-style-button">
-                  <a href="types.html">Open Drawers</a>
-                </div>
-              </div>
-            </div>
-            <img src="/assets/image-placeholder.png" />
           </div>
         </div>
       </div>
-    </div>
-    <!-- ***** main container end ***** -->
+    </section>
+    <!-- ***** clothing details start ***** -->
 
     <!-- ***** footer start ***** -->
     <footer>
@@ -109,7 +104,7 @@
               <img src="/assets/logo-placeholder.png" alt="logo" />
             </div>
             <ul>
-              <li><a href="index.html" class="active">My Closet</a></li>
+              <li><a href="index.html">My Closet</a></li>
               <li><a href="clothes.html">Wardrobe</a></li>
               <li><a href="outfits.html">Outfits</a></li>
               <li><a href="types.html">Drawers</a></li>
