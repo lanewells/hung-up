@@ -35,10 +35,6 @@ app.get("/outfits/:id", outfitController.getOutfitById)
 app.get("/types/:id", typeController.getTypeById)
 
 app.get("/clothes/type/:type", clothingController.getClothesByType)
-//app.get(
-//   "/clothes/category/:category",
-//   clothingController.getClothesByTypeCategory
-// )
 app.get("/clothes/color/:color", clothingController.getClothesByColor)
 app.get("/types/category/:category", typeController.getTypeByCategory)
 
