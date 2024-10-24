@@ -14,19 +14,20 @@
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-    <link rel="stylesheet" type="text/css" href="main.css" />
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
 
     <title>Hung Up | Wardrobe</title>
   </head>
 
   <body>
     <!-- ***** header start ***** -->
-    <header>
+    <header class="header-strip">
       <div class="container">
         <div class="row">
-          <nav>
+          <nav class="main-nav">
             <!-- ***** logo start ***** -->
             <a href="index.html" class="logo">
               <img src="/assets/logo-placeholder.png" alt="logo" />
@@ -35,9 +36,9 @@
             <!-- ***** nav bar start ***** -->
             <ul>
               <li><a href="index.html">My Closet</a></li>
-              <li><a href="clothes.html" class="active"></a>Wardrobe</li>
-              <li><a href="outfits.html"></a>Outfits</li>
-              <li><a href="types.html"></a>Drawers</li>
+              <li><a href="clothes.html" class="active">Wardrobe</a></li>
+              <li><a href="outfits.html">Outfits</a></li>
+              <li><a href="types.html">Drawers</a></li>
             </ul>
             <!-- ***** nav bar end ***** -->
           </nav>
@@ -46,183 +47,139 @@
     </header>
     <!-- ***** header end ***** -->
 
-    <!-- ***** clothes section start ***** -->
-    <section class="section" id="clothes">
-      <div class="page-heading">
-        <div class="row">
-          <div class="column-12">
-            <div class="heading">
-              <h2>Wardrobe</h2>
-            </div>
-          </div>
-        </div>
-      </div>
+    <!-- ***** main container start ***** -->
+    <section class="main" id="wardrobe-section">
       <div class="container">
-        <div class="row">
-          <div class="column-4">
-            <div class="item">
-              <div class="hover-content">
-                <ul>
-                  <li>
-                    <a href="single-clothing.html">
-                      <i class="fa fa-eye"></i
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-              <img src="/assets/image-placeholder.png" />
-            </div>
-            <div class="sub-content">
-              <h4>Clothing Item Name</h4>
-              <ul class="item-details">
-                <li>Color</li>
-                <li>Type</li>
-                <li>Subtype</li>
-              </ul>
+        <h2>My Wardrobe</h2>
+        <div class="wardrobe-grid">
+          <!-- clothing item -->
+          <div class="wardrobe-item">
+            <img src="/assets/image-placeholder.png" alt="Clothing item" />
+            <div class="wardrobe-details">
+              <p class="name-text"><strong>clothing item name</strong></p>
+              <p class="type-text"><strong>type</strong></p>
+              <p class="subtype-text"><strong>subtype</strong></p>
+              <p class="color-text"><strong>color</strong></p>
             </div>
           </div>
-          <div class="column-4">
-            <div class="item">
-              <div class="hover-content">
-                <ul>
-                  <li>
-                    <a href="single-clothing.html">
-                      <i class="fa fa-eye"></i
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-              <img src="/assets/image-placeholder.png" />
-            </div>
-            <div class="sub-content">
-              <h4>Clothing Item Name</h4>
-              <ul class="item-details">
-                <li>Color</li>
-                <li>Type</li>
-                <li>Subtype</li>
-              </ul>
+          <!-- clothing item -->
+          <div class="wardrobe-item">
+            <img src="/assets/image-placeholder.png" alt="Clothing item" />
+            <div class="wardrobe-details">
+              <p class="name-text"><strong>clothing item name</strong></p>
+              <p class="type-text"><strong>type</strong></p>
+              <p class="subtype-text"><strong>subtype</strong></p>
+              <p class="color-text"><strong>color</strong></p>
             </div>
           </div>
-          <div class="column-4">
-            <div class="item">
-              <div class="hover-content">
-                <ul>
-                  <li>
-                    <a href="single-clothing.html">
-                      <i class="fa fa-eye"></i
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-              <img src="/assets/image-placeholder.png" />
-            </div>
-            <div class="sub-content">
-              <h4>Clothing Item Name</h4>
-              <ul class="item-details">
-                <li>Color</li>
-                <li>Type</li>
-                <li>Subtype</li>
-              </ul>
+          <!-- clothing item -->
+          <div class="wardrobe-item">
+            <img src="/assets/image-placeholder.png" alt="Clothing item" />
+            <div class="wardrobe-details">
+              <p class="name-text"><strong>clothing item name</strong></p>
+              <p class="type-text"><strong>type</strong></p>
+              <p class="subtype-text"><strong>subtype</strong></p>
+              <p class="color-text"><strong>color</strong></p>
             </div>
           </div>
-          <div class="column-4">
-            <div class="item">
-              <div class="hover-content">
-                <ul>
-                  <li>
-                    <a href="single-clothing.html">
-                      <i class="fa fa-eye"></i
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-              <img src="/assets/image-placeholder.png" />
-            </div>
-            <div class="sub-content">
-              <h4>Clothing Item Name</h4>
-              <ul class="item-details">
-                <li>Color</li>
-                <li>Type</li>
-                <li>Subtype</li>
-              </ul>
+          <!-- clothing item -->
+          <div class="wardrobe-item">
+            <img src="/assets/image-placeholder.png" alt="Clothing item" />
+            <div class="wardrobe-details">
+              <p class="name-text"><strong>clothing item name</strong></p>
+              <p class="type-text"><strong>type</strong></p>
+              <p class="subtype-text"><strong>subtype</strong></p>
+              <p class="color-text"><strong>color</strong></p>
             </div>
           </div>
-          <div class="column-4">
-            <div class="item">
-              <div class="hover-content">
-                <ul>
-                  <li>
-                    <a href="single-clothing.html">
-                      <i class="fa fa-eye"></i
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-              <img src="/assets/image-placeholder.png" />
-            </div>
-            <div class="sub-content">
-              <h4>Clothing Item Name</h4>
-              <ul class="item-details">
-                <li>Color</li>
-                <li>Type</li>
-                <li>Subtype</li>
-              </ul>
+          <!-- clothing item -->
+          <div class="wardrobe-item">
+            <img src="/assets/image-placeholder.png" alt="Clothing item" />
+            <div class="wardrobe-details">
+              <p class="name-text"><strong>clothing item name</strong></p>
+              <p class="type-text"><strong>type</strong></p>
+              <p class="subtype-text"><strong>subtype</strong></p>
+              <p class="color-text"><strong>color</strong></p>
             </div>
           </div>
-          <div class="column-4">
-            <div class="item">
-              <div class="hover-content">
-                <ul>
-                  <li>
-                    <a href="single-clothing.html">
-                      <i class="fa fa-eye"></i
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-              <img src="/assets/image-placeholder.png" />
+          <!-- clothing item -->
+          <div class="wardrobe-item">
+            <img src="/assets/image-placeholder.png" alt="Clothing item" />
+            <div class="wardrobe-details">
+              <p class="name-text"><strong>clothing item name</strong></p>
+              <p class="type-text"><strong>type</strong></p>
+              <p class="subtype-text"><strong>subtype</strong></p>
+              <p class="color-text"><strong>color</strong></p>
             </div>
-            <div class="sub-content">
-              <h4>Clothing Item Name</h4>
-              <ul class="item-details">
-                <li>Color</li>
-                <li>Type</li>
-                <li>Subtype</li>
-              </ul>
+          </div>
+          <!-- clothing item -->
+          <div class="wardrobe-item">
+            <img src="/assets/image-placeholder.png" alt="Clothing item" />
+            <div class="wardrobe-details">
+              <p class="name-text"><strong>clothing item name</strong></p>
+              <p class="type-text"><strong>type</strong></p>
+              <p class="subtype-text"><strong>subtype</strong></p>
+              <p class="color-text"><strong>color</strong></p>
+            </div>
+          </div>
+          <!-- clothing item -->
+          <div class="wardrobe-item">
+            <img src="/assets/image-placeholder.png" alt="Clothing item" />
+            <div class="wardrobe-details">
+              <p class="name-text"><strong>clothing item name</strong></p>
+              <p class="type-text"><strong>type</strong></p>
+              <p class="subtype-text"><strong>subtype</strong></p>
+              <p class="color-text"><strong>color</strong></p>
+            </div>
+          </div>
+          <!-- clothing item -->
+          <div class="wardrobe-item">
+            <img src="/assets/image-placeholder.png" alt="Clothing item" />
+            <div class="wardrobe-details">
+              <p class="name-text"><strong>clothing item name</strong></p>
+              <p class="type-text"><strong>type</strong></p>
+              <p class="subtype-text"><strong>subtype</strong></p>
+              <p class="color-text"><strong>color</strong></p>
+            </div>
+          </div>
+          <!-- clothing item -->
+          <div class="wardrobe-item">
+            <img src="/assets/image-placeholder.png" alt="Clothing item" />
+            <div class="wardrobe-details">
+              <p class="name-text"><strong>clothing item name</strong></p>
+              <p class="type-text"><strong>type</strong></p>
+              <p class="subtype-text"><strong>subtype</strong></p>
+              <p class="color-text"><strong>color</strong></p>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- ***** clothes section end ***** -->
+    <!-- ***** main container end ***** -->
 
     <!-- ***** footer start ***** -->
     <footer>
       <div class="container">
-        <div class="row">
-          <div class="column-b">
-            <div class="logo">
-              <img src="/assets/logo-placeholder.png" alt="logo" />
-            </div>
-            <ul>
-              <li><a href="index.html">My Closet</a></li>
-              <li><a href="clothes.html">Wardrobe</a></li>
-              <li><a href="outfits.html">Outfits</a></li>
-              <li><a href="types.html">Drawers</a></li>
-            </ul>
+        <div class="footer-row">
+          <div class="logo">
+            <img src="/assets/logo-placeholder.png" alt="logo" />
           </div>
-          <div class="column-c">
-            <div class="under-footer">
-              <p>Hung Up created by Lane Wells 2024</p>
-            </div>
+          <ul>
+            <li><a href="index.html">My Closet</a></li>
+            <li><a href="clothes.html" class="active">Wardrobe</a></li>
+            <li><a href="outfits.html">Outfits</a></li>
+            <li><a href="types.html">Drawers</a></li>
+          </ul>
+          <div class="credits">
+            <p>Hung Up created by Lane Wells 2024</p>
           </div>
         </div>
       </div>
     </footer>
     <!-- ***** footer end ***** -->
 
-    <!-- ***** script link start ***** -->
+    <!-- ***** script insert start ***** -->
     <script src="script.js"></script>
-    <!-- ***** script link end ***** -->
+    <!-- ***** script insert end ***** -->
   </body>
 </html>

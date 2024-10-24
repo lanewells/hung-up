@@ -10,23 +10,23 @@
     <meta name="author" content="Lane Wells" />
     <link
       href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
-      rel="stylesheet"
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-    <link rel="stylesheet" type="text/css" href="main.css" />
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
 
     <title>Hung Up | Outfits</title>
   </head>
 
   <body>
     <!-- ***** header start ***** -->
-    <header>
+    <header class="header-strip">
       <div class="container">
         <div class="row">
-          <nav>
+          <nav class="main-nav">
             <!-- ***** logo start ***** -->
             <a href="index.html" class="logo">
               <img src="/assets/logo-placeholder.png" alt="logo" />
@@ -35,9 +35,9 @@
             <!-- ***** nav bar start ***** -->
             <ul>
               <li><a href="index.html">My Closet</a></li>
-              <li><a href="clothes.html"></a>Wardrobe</li>
-              <li><a href="outfits.html" class="active"></a>Outfits</li>
-              <li><a href="types.html"></a>Drawers</li>
+              <li><a href="clothes.html">Wardrobe</a></li>
+              <li><a href="outfits.html" class="active">Outfits</a></li>
+              <li><a href="types.html">Drawers</a></li>
             </ul>
             <!-- ***** nav bar end ***** -->
           </nav>
@@ -46,151 +46,122 @@
     </header>
     <!-- ***** header end ***** -->
 
-    <!-- ***** outfits section start ***** -->
-    <section class="section" id="outfits">
-      <div class="page-heading">
-        <div class="row">
-          <div class="column-12">
-            <div class="heading">
-              <h2>Outfits</h2>
-            </div>
-          </div>
-        </div>
-      </div>
+    <!-- ***** main container start ***** -->
+    <section class="main" id="outfits-section">
       <div class="container">
-        <div class="row">
-          <div class="column-4">
-            <div class="item">
-              <div class="hover-content">
-                <ul>
-                  <li>
-                    <a href="single-outfit.html"> <i class="fa fa-eye"></i></a>
-                  </li>
-                  <li>
-                    <a href="single-outfit.html"> <i class="fa fa-star"></i></a>
-                  </li>
-                </ul>
+        <h2>My Outfits</h2>
+        <div class="outfit-grid">
+          <!-- ***** outfit item ***** -->
+          <div class="outfit-item">
+            <img src="/assets/image-placeholder.png" alt="Outfit image" />
+            <div class="outfit-details">
+              <p class="outfit-text"><strong>outfit title</strong></p>
+              <p class="occasion-text"><strong>occasion</strong></p>
+              <div class="outfit-clothing-images">
+                <img src="/assets/image-placeholder.png" alt="" />
+                <img src="/assets/image-placeholder.png" alt="" />
+                <img src="/assets/image-placeholder.png" alt="" />
               </div>
-              <img src="/assets/image-placeholder.png" />
-            </div>
-            <div class="sub-content">
-              <h4>Outfit 1</h4>
-              <span>Occasion</span>
-              <ul class="items-in-outfit">
-                <li><p>Clothing 1</p></li>
-                <li><p>Clothing 2</p></li>
-                <li><p>Clothing 3</p></li>
-                <li><p>Clothing 4</p></li>
-              </ul>
             </div>
           </div>
-          <div class="column-4">
-            <div class="item">
-              <div class="hover-content">
-                <ul>
-                  <li>
-                    <a href="single-outfit.html"> <i class="fa fa-eye"></i></a>
-                  </li>
-                  <li>
-                    <a href="single-outfit.html"> <i class="fa fa-star"></i></a>
-                  </li>
-                </ul>
+          <!-- ***** outfit item ***** -->
+
+          <div class="outfit-item">
+            <img src="/assets/image-placeholder.png" alt="Outfit image" />
+            <div class="outfit-details">
+              <p class="outfit-text"><strong>outfit title</strong></p>
+              <p class="occasion-text"><strong>occasion</strong></p>
+              <div class="outfit-clothing-images">
+                <img src="/assets/image-placeholder.png" alt="" />
+                <img src="/assets/image-placeholder.png" alt="" />
+                <img src="/assets/image-placeholder.png" alt="" />
               </div>
-              <img src="/assets/image-placeholder.png" />
-            </div>
-            <div class="sub-content">
-              <h4>Outfit Title</h4>
-              <span>Occasion</span>
-              <ul class="items-in-outfit">
-                <li><p>Clothing 1</p></li>
-                <li><p>Clothing 2</p></li>
-                <li><p>Clothing 3</p></li>
-                <li><p>Clothing 4</p></li>
-              </ul>
             </div>
           </div>
-          <div class="column-4">
-            <div class="item">
-              <div class="hover-content">
-                <ul>
-                  <li>
-                    <a href="single-outfit.html"> <i class="fa fa-eye"></i></a>
-                  </li>
-                  <li>
-                    <a href="single-outfit.html"> <i class="fa fa-star"></i></a>
-                  </li>
-                </ul>
+          <!-- ***** outfit item ***** -->
+
+          <div class="outfit-item">
+            <img src="/assets/image-placeholder.png" alt="Outfit image" />
+            <div class="outfit-details">
+              <p class="outfit-text"><strong>outfit title</strong></p>
+              <p class="occasion-text"><strong>occasion</strong></p>
+              <div class="outfit-clothing-images">
+                <img src="/assets/image-placeholder.png" alt="" />
+                <img src="/assets/image-placeholder.png" alt="" />
+                <img src="/assets/image-placeholder.png" alt="" />
               </div>
-              <img src="/assets/image-placeholder.png" />
-            </div>
-            <div class="sub-content">
-              <h4>Outfit Title</h4>
-              <span>Occasion</span>
-              <ul class="items-in-outfit">
-                <li><p>Clothing 1</p></li>
-                <li><p>Clothing 2</p></li>
-                <li><p>Clothing 3</p></li>
-                <li><p>Clothing 4</p></li>
-              </ul>
             </div>
           </div>
-          <div class="column-4">
-            <div class="item">
-              <div class="hover-content">
-                <ul>
-                  <li>
-                    <a href="single-outfit.html"> <i class="fa fa-eye"></i></a>
-                  </li>
-                  <li>
-                    <a href="single-outfit.html"> <i class="fa fa-star"></i></a>
-                  </li>
-                </ul>
+          <!-- ***** outfit item ***** -->
+
+          <div class="outfit-item">
+            <img src="/assets/image-placeholder.png" alt="Outfit image" />
+            <div class="outfit-details">
+              <p class="outfit-text"><strong>outfit title</strong></p>
+              <p class="occasion-text"><strong>occasion</strong></p>
+              <div class="outfit-clothing-images">
+                <img src="/assets/image-placeholder.png" alt="" />
+                <img src="/assets/image-placeholder.png" alt="" />
+                <img src="/assets/image-placeholder.png" alt="" />
               </div>
-              <img src="/assets/image-placeholder.png" />
             </div>
-            <div class="sub-content">
-              <h4>Outfit Title</h4>
-              <span>Occasion</span>
-              <ul class="items-in-outfit">
-                <li><p>Clothing 1</p></li>
-                <li><p>Clothing 2</p></li>
-                <li><p>Clothing 3</p></li>
-                <li><p>Clothing 4</p></li>
-              </ul>
+          </div>
+          <!-- ***** outfit item ***** -->
+
+          <div class="outfit-item">
+            <img src="/assets/image-placeholder.png" alt="Outfit image" />
+            <div class="outfit-details">
+              <p class="outfit-text"><strong>outfit title</strong></p>
+              <p class="occasion-text"><strong>occasion</strong></p>
+              <div class="outfit-clothing-images">
+                <img src="/assets/image-placeholder.png" alt="" />
+                <img src="/assets/image-placeholder.png" alt="" />
+                <img src="/assets/image-placeholder.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <!-- ***** outfit item ***** -->
+
+          <div class="outfit-item">
+            <img src="/assets/image-placeholder.png" alt="Outfit image" />
+            <div class="outfit-details">
+              <p class="outfit-text"><strong>outfit title</strong></p>
+              <p class="occasion-text"><strong>occasion</strong></p>
+              <div class="outfit-clothing-images">
+                <img src="/assets/image-placeholder.png" alt="" />
+                <img src="/assets/image-placeholder.png" alt="" />
+                <img src="/assets/image-placeholder.png" alt="" />
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- ***** outfits section end ***** -->
+    <!-- ***** main container end ***** -->
 
     <!-- ***** footer start ***** -->
     <footer>
       <div class="container">
-        <div class="row">
-          <div class="column-b">
-            <div class="logo">
-              <img src="/assets/logo-placeholder.png" alt="logo" />
-            </div>
-            <ul>
-              <li><a href="index.html">My Closet</a></li>
-              <li><a href="clothes.html">Wardrobe</a></li>
-              <li><a href="outfits.html">Outfits</a></li>
-              <li><a href="types.html">Drawers</a></li>
-            </ul>
+        <div class="footer-row">
+          <div class="logo">
+            <img src="/assets/logo-placeholder.png" alt="logo" />
           </div>
-          <div class="column-c">
-            <div class="under-footer">
-              <p>Hung Up created by Lane Wells 2024</p>
-            </div>
+          <ul>
+            <li><a href="index.html">My Closet</a></li>
+            <li><a href="clothes.html">Wardrobe</a></li>
+            <li><a href="outfits.html" class="active">Outfits</a></li>
+            <li><a href="types.html">Drawers</a></li>
+          </ul>
+          <div class="credits">
+            <p>Hung Up created by Lane Wells 2024</p>
           </div>
         </div>
       </div>
     </footer>
     <!-- ***** footer end ***** -->
 
-    <!-- ***** script link start ***** -->
+    <!-- ***** script insert start ***** -->
     <script src="script.js"></script>
-    <!-- ***** script link end ***** -->
+    <!-- ***** script insert end ***** -->
   </body>
 </html>

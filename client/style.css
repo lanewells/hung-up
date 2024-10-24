@@ -1,7 +1,13 @@
-/* font */
+/* font
+----------------------------------
+----------------------------------
+*/
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
 
-/* global */
+/* global
+----------------------------------
+----------------------------------
+*/
 body {
   font-family: "Poppins", sans-serif;
   margin: 0;
@@ -20,7 +26,11 @@ a:hover {
   color: #5c5c5c;
 }
 
-/* header */
+/* header
+----------------------------------
+----------------------------------
+*/
+
 .header-strip {
   background-color: #f0f0f0;
   padding: 10px 0;
@@ -67,7 +77,10 @@ a:hover {
   border-radius: 5px;
 }
 
-/* main section */
+/* main section 
+----------------------------------
+----------------------------------
+*/
 .main {
   padding: 50px 0;
   background-color: #fff;
@@ -163,12 +176,324 @@ a:hover {
   color: #fff;
 }
 
-/* hovering */
+/* hovering 
+----------------------------------
+----------------------------------
+*/
 .thumb:hover .hover-content {
   opacity: 1;
 }
 
-/* footer */
+/* clothes page 
+----------------------------------
+----------------------------------
+*/
+.wardrobe-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.wardrobe-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.wardrobe-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.wardrobe-details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 20px;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: opacity 0.4s ease-in-out;
+  font-size: 14px;
+}
+
+.wardrobe-item:hover .wardrobe-details {
+  opacity: 1;
+}
+
+.wardrobe-details p {
+  margin: 5px 0;
+}
+
+.wardrobe-details strong {
+  font-weight: 600;
+}
+
+/* clothes page - media query
+----------------------------------
+----------------------------------
+*/
+@media (max-width: 1024px) {
+  .wardrobe-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .wardrobe-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .wardrobe-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* outfits page 
+----------------------------------
+----------------------------------
+*/
+
+.outfit-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.outfit-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.outfit-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.outfit-details {
+  position: absolute;
+  bottom: -150px;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background-color: #f0f0f0;
+  transition: bottom 0.4s ease-in-out;
+}
+
+.outfit-item:hover .outfit-details {
+  bottom: 0;
+}
+
+.outfit-details p {
+  margin: 5px 0;
+}
+
+.outfit-details strong {
+  font-weight: 600;
+}
+
+.outfit-clothing-images {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-right: 10%;
+}
+
+.outfit-clothing-images img {
+  width: 20%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* outfits page - media query
+----------------------------------
+----------------------------------
+*/
+@media (max-width: 1024px) {
+  .outfit-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .outfit-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* drawers page 
+----------------------------------
+----------------------------------
+*/
+.drawer-item {
+  position: relative;
+  width: 100%;
+  background-color: #f0f0f0;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.drawer-label {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+
+.drawer-types {
+  display: none;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.drawer-item:hover {
+  transform: translateY(-10px);
+}
+
+.drawer-item:hover .drawer-types {
+  display: block;
+}
+
+.drawer-types p {
+  margin: 5px 0;
+  font-size: 16px;
+  background-color: #fff;
+  padding: 8px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.drawer-types p:hover {
+  background-color: #ddd;
+}
+
+/* drawers page - media query
+----------------------------------
+----------------------------------
+*/
+@media (max-width: 768px) {
+  .drawer-item {
+    padding: 15px;
+  }
+
+  .drawer-label {
+    font-size: 18px;
+  }
+
+  .drawer-types p {
+    font-size: 14px;
+  }
+}
+
+/* clothing details page 
+----------------------------------
+----------------------------------
+*/
+
+.clothing-detail {
+  padding: 30px 0;
+}
+
+.clothing-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.image-container img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.details-container {
+  max-width: 500px;
+  width: 100%;
+}
+
+.details-info {
+  margin-bottom: 0;
+}
+
+.details-info p {
+  font-size: 12px;
+  margin: 5px 0;
+  color: grey;
+}
+
+#type-text,
+#subtype-text,
+#color-text,
+#size-text {
+  color: #333;
+  font-size: 15pt;
+  margin-top: 12px;
+  line-height: 60%;
+}
+
+.ratings {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.rating {
+  text-align: center;
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+}
+
+.stars i {
+  font-size: 28px;
+  color: #ddd;
+  cursor: pointer;
+  margin: 0 0px;
+}
+
+.stars i.active {
+  color: #ffd700;
+}
+
+.back-button {
+  display: inline-block;
+  margin-top: 50px;
+  padding: 12px 25px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.back-button:hover {
+  background-color: cornflowerblue;
+}
+
+/* footer 
+----------------------------------
+----------------------------------
+*/
+
 footer {
   background-color: #f0f0f0;
   padding: 20px 0;
@@ -223,7 +548,10 @@ footer .credits p {
   color: #333;
 }
 
-/* media query */
+/* media query 
+----------------------------------
+----------------------------------
+*/
 @media (max-width: 768px) {
   .column-6 {
     flex: 0 0 100%;

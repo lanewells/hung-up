@@ -45,25 +45,6 @@ const getClothesByType = async (req, res) => {
   }
 }
 
-// // get clothes by type category
-// const getClothesByTypeCategory = async (req, res) => {
-//   try {
-//     const { category } = req.params
-//     console.log(category)
-//     console.log(req.params)
-
-//     const clothes = await Clothing.find({
-//       "type.category": { $regex: category, $options: "i" }
-//     })
-//     if (!clothes || clothes.length === 0) {
-//       return res.status(404).json({ message: "No clothes found! Womp womp." })
-//     }
-//     res.json(clothes)
-//   } catch (error) {
-//     res.status(500).json({ message: error.message })
-//   }
-// }
-
 // get clothes by color
 const getClothesByColor = async (req, res) => {
   try {
