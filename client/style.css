@@ -13,13 +13,13 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f9f9f9;
-  color: #333;
+  color: #2d2d2d;
   line-height: 1.6;
 }
 
 a {
   text-decoration: none;
-  color: #333;
+  color: #2d2d2d;
 }
 
 a:hover {
@@ -66,13 +66,13 @@ a:hover {
 }
 
 .main-nav ul li a:hover {
-  background-color: #333;
+  background-color: #d1e0f0;
   color: #fff;
   border-radius: 5px;
 }
 
 .main-nav ul li a.active {
-  background-color: cornflowerblue;
+  background-color: #1e90ff;
   color: white;
   border-radius: 5px;
 }
@@ -82,10 +82,13 @@ a:hover {
 ----------------------------------
 */
 .main {
-  padding: 50px 0;
+  padding: 150px 0;
   background-color: #fff;
 }
 
+#index-section {
+  margin-bottom: 0;
+}
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -162,9 +165,20 @@ a:hover {
   padding: 20px;
 }
 
+.hung-up {
+  text-align: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: -20px;
+}
+
+#container-index {
+  margin: -50px auto;
+}
+
 .main-button a {
   background-color: #fff;
-  color: #333;
+  color: #2d2d2d;
   padding: 10px 20px;
   border-radius: 5px;
   font-weight: 500;
@@ -172,7 +186,7 @@ a:hover {
 }
 
 .main-button a:hover {
-  background-color: #333;
+  background-color: #6bcb77;
   color: #fff;
 }
 
@@ -350,7 +364,7 @@ a:hover {
 .drawer-label {
   font-size: 20px;
   font-weight: 600;
-  color: #333;
+  color: #2d2d2d;
   text-align: center;
 }
 
@@ -441,7 +455,7 @@ a:hover {
 #subtype-text,
 #color-text,
 #size-text {
-  color: #333;
+  color: #2d2d2d;
   font-size: 15pt;
   margin-top: 12px;
   line-height: 60%;
@@ -478,7 +492,7 @@ a:hover {
   display: inline-block;
   margin-top: 50px;
   padding: 12px 25px;
-  background-color: #333;
+  background-color: #2d2d2d;
   color: #fff;
   border-radius: 5px;
   text-decoration: none;
@@ -486,7 +500,7 @@ a:hover {
 }
 
 .back-button:hover {
-  background-color: cornflowerblue;
+  background-color: #9c27b0;
 }
 
 /* footer 
@@ -529,7 +543,7 @@ footer ul li {
 
 footer ul li a {
   text-decoration: none;
-  color: #333;
+  color: #2d2d2d;
   font-weight: 500;
 }
 
@@ -545,7 +559,7 @@ footer .credits {
 footer .credits p {
   margin: 0;
   font-size: 14px;
-  color: #333;
+  color: #2d2d2d;
 }
 
 /* media query 
