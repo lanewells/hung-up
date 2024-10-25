@@ -1,8 +1,47 @@
 # Hung Up
 
-An application designed to help you beat decision fatigue while getting dressed.
+An application I designed to help beat decision fatigue while getting dressed.
 
-### Citations
+## User Stories
+
+I created this project with the vision of an application that lets users:
+
+- Populate a database with their own existing articles of clothing
+- Create outfits based on those clothing items
+- Enter details, values, and images for their clothing pieces and outfits
+- View and sort their clothing by type
+
+## Creation
+
+### ERD
+
+![ERD Chart](/assets/readme/ERD.png)
+
+### Wireframing
+
+![Clothes Page](/assets/readme/Clothing1.png)
+
+![Clothing Details Page](/assets/readme/Clothing2.png)
+
+![Outfits Page](/assets/readme/Outfits1.png)
+
+![Outfit Details Page](/assets/readme/Outfit2.png)
+
+![User CRUD Page - Outfit](/assets/readme/CRUD.png)
+
+![User CRUD Page - Clothing](/assets/readme/CRUDClothing.png)
+
+## Goals
+
+### MVPs
+
+1.  3 models each with full CRUD functionality on back end
+2.  Intuitive user interface
+3.
+
+### Stretch Goals
+
+## Citations
 
 [Javascript.info](https://javascript.info/regexp-introduction)
 for the understanding and use of the i flag to ignore casing
