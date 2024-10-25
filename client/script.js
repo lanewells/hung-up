@@ -148,25 +148,26 @@ async function populateOutfits() {
     const response = await axios.get(`${baseURL}/outfits`)
     const outfits = response.data
 
-    // clear any info from placeholders
+    // outfit template to clone - from html with placeholders
+    const outfitTemplate = document.querySelector(".outfit-item")
+    if (!outfitTemplate) {
+      console.error("Outfit template not found.")
+      return
+    }
+
     const outfitGrid = document.querySelector(".outfit-grid")
     outfitGrid.innerHTML = ""
 
     outfits.forEach(async (outfit) => {
-      // outfit template to clone - from html with placeholders
-      const outfitTemplate = document
-        .querySelector(".outfit-item")
-        .cloneNode(true)
-
-      const outfitImage = outfitTemplate.querySelector(".outfit-image")
-      outfitImage.src = outfit.imageUrl
-      outfitImage.alt = `Outfit image for ${outfit.occasion}`
-      outfitTemplate.querySelector(".outfit-text strong").textContent =
+      const clonedOutfit = outfitTemplate.cloneNode(true)
+      clonedOutfit.style.display = "block"
+      clonedOutfit.querySelector(".outfit-image").src = outfit.imageUrl
+      clonedOutfit.querySelector(".outfit-text strong").textContent =
         outfit.occasion
-      outfitTemplate.querySelector(".occasion-text strong").textContent =
+      clonedOutfit.querySelector(".occasion-text strong").textContent =
         outfit.weather
 
-      const clothingImagesContainer = outfitTemplate.querySelector(
+      const clothingImagesContainer = clonedOutfit.querySelector(
         ".outfit-clothing-images"
       )
       clothingImagesContainer.innerHTML = ""
@@ -182,7 +183,8 @@ async function populateOutfits() {
         clothingImage.alt = clothing.name
         clothingImagesContainer.appendChild(clothingImage)
       }
-      outfitGrid.appendChild(outfitTemplate)
+
+      outfitGrid.appendChild(clonedOutfit)
     })
   } catch (error) {
     console.error("Error fetching outfits:", error.message)
