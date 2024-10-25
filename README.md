@@ -11,13 +11,11 @@ I created this project with the vision of an application that lets users:
 - Enter details, values, and images for their clothing pieces and outfits
 - View and sort their clothing by type
 
-## Creation
-
-#### ERD
+## ERD
 
 ![ERD Chart](/assets/readme/ERD.png)
 
-#### Wireframing
+## Wireframing
 
 ![Clothes Page](/assets/readme/Clothing1.png)
 
@@ -31,13 +29,13 @@ I created this project with the vision of an application that lets users:
 
 ![User CRUD Page - Clothing](/assets/readme/CRUDClothing.png)
 
-## Goals
+## Goals:
 
-#### Learning
+## Learning
 
 I had my own idea of what _placeholder_ meant. I implemented this in my clothes.html page for each clothing item I wanted to display. It made working with a dynamic size ranging dataset complicated and tedious.
 
-###### clothes.html
+### clothes.html
 
 ```html
 <!-- clothing item -->
@@ -55,7 +53,7 @@ I had my own idea of what _placeholder_ meant. I implemented this in my clothes.
 By the time I got to populating the outfits.html page, I was TIRED and researched different methods of populating elements with a dynamic dataset. I learned how to use cloneNode and used it instead here.
 _See citations at end of document_
 
-###### outfits.html
+### outfits.html
 
 This resulted in a denser script, but smoother connection between front end and back end during data population. There's also less room for tiny typing errors to hide.
 
@@ -85,26 +83,26 @@ Below is a small snippet of my javascript function containing cloneNode.
         .cloneNode(true)
 ```
 
-#### MVPs Met
+## MVPs Met
 
 1.  Create 3 models each with full CRUD functionality on back end.
 2.  Design an intuitive user interface.
 3.  Have working Read functionality on all 3 models on the front end.
 
-#### Stretch Goals Met
+## Stretch Goals Met
 
 1.  Make my site beautiful.
 2.  Display my "type" model according to its categories.
 3.  Create "My Closet" to function as a homepage.
 4.  Add dresser drawer-opening effect to my types model page.
 
-#### Did Not Meet/Next Goals
+## Did Not Meet/Next Goals
 
 1.  Making every single page friendly across mobile devices. A couple of things just aren't very friendly.
 2.  One model with C_UD on front end.
 3.  Outfit details page.
 
-### Technologies Used
+## Technologies Used
 
 - Axios
 - Nodemon
@@ -115,7 +113,7 @@ Below is a small snippet of my javascript function containing cloneNode.
 - Body-parser
 - Morgan
 
-### Citations
+## Citations
 
 [Javascript.info](https://javascript.info/regexp-introduction)
 for the understanding and use of the i flag to ignore casing
