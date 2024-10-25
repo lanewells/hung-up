@@ -98,11 +98,22 @@ Below is a small snippet of my javascript function containing cloneNode.
 3.  Create "My Closet" to function as a homepage.
 4.  Add dresser drawer-opening effect to my types model page.
 
-#### Did Not Meet
+#### Did Not Meet/Next Goals
 
 1.  Making every single page friendly across mobile devices. A couple of things just aren't very friendly.
 2.  One model with C_UD on front end.
 3.  Outfit details page.
+
+### Technologies Used
+
+- Axios
+- Nodemon
+- MongoDB
+- Mongoose
+- Express
+- Cors
+- Body-parser
+- Morgan
 
 ### Citations
 
