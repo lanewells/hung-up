@@ -13,6 +13,7 @@ app.use(express.json())
 app.use(logger("dev"))
 app.use(bodyParser.json())
 app.use(cors())
+app.use(express.static('client'));
 
 app.get("/", async (req, res) => {
   res.send("Welcome to your wardrobe.")
