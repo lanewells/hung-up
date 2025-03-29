@@ -8,14 +8,6 @@
     />
     <meta name="description" content="Your wardrobe helper" />
     <meta name="author" content="Lane Wells" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
 
     <link rel="stylesheet" type="text/css" href="style.css" />
 
@@ -23,33 +15,26 @@
   </head>
 
   <body>
-    <!-- ***** header start ***** -->
-    <header class="header-strip">
-      <div class="container">
-        <div class="row">
-          <nav class="main-nav">
-            <!-- ***** logo start ***** -->
-            <a href="index.html" class="logo">
-              <img src="assets/logo.svg" alt="logo" />
-            </a>
-            <!-- ***** logo end ***** -->
-            <!-- ***** nav bar start ***** -->
-            <ul>
-              <li><a href="index.html" class="active">My Closet</a></li>
-              <li><a href="clothes.html">Wardrobe</a></li>
-              <li><a href="outfits.html">Outfits</a></li>
-              <li><a href="types.html">Drawers</a></li>
-            </ul>
-            <!-- ***** nav bar end ***** -->
-          </nav>
+
+    <header>
+      <nav>
+        <div class="start">
+          <a href="index.html" class="logo">
+            <img src="assets/logo.svg" alt="logo" />
+          </a>
+          <h2>HUNG-UP</h2>
         </div>
-      </div>
+        <div>
+          <ul>
+            <li><a href="index.html" class="active">My Closet</a></li>
+            <li><a href="clothes.html">Wardrobe</a></li>
+            <li><a href="outfits.html">Outfits</a></li>
+            <li><a href="types.html">Drawers</a></li>
+          </ul>
+        </div>
+      </nav>
     </header>
-    <!-- ***** header end ***** -->
-    <div class="hung-up">
-      <h1>Hung Up?</h1>
-    </div>
-    <!-- ***** main container start ***** -->
+
     <section class="main" id="index-section">
       <div class="container" id="container-index">
         <div class="row">
@@ -120,30 +105,23 @@
     </section>
     <!-- ***** main container end ***** -->
 
-    <!-- ***** footer start ***** -->
     <footer>
-      <div class="container">
-        <div class="footer-row">
-          <div class="logo">
-            <img src="assets/logo.svg" alt="logo" />
-          </div>
-          <ul>
-            <li><a href="index.html" class="active">My Closet</a></li>
-            <li><a href="clothes.html">Wardrobe</a></li>
-            <li><a href="outfits.html">Outfits</a></li>
-            <li><a href="types.html">Drawers</a></li>
-          </ul>
-          <div class="credits">
-            <p>Hung Up created by Lane Wells 2024</p>
-          </div>
+        <div class="logo">
+          <img src="assets/logo.svg" alt="logo" />
         </div>
-      </div>
+        <ul>
+          <li><a href="index.html" class="active">My Closet</a></li>
+          <li><a href="clothes.html">Wardrobe</a></li>
+          <li><a href="outfits.html">Outfits</a></li>
+          <li><a href="types.html">Drawers</a></li>
+        </ul>
+        <div class="credits">
+          <p>Hung Up created by Delaney Wells 2024</p>
+        </div>
     </footer>
-    <!-- ***** footer end ***** -->
 
-    <!-- ***** script link start ***** -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="script.js"></script>
-    <!-- ***** script link end ***** -->
+
   </body>
 </html>
