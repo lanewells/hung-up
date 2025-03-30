@@ -21,12 +21,19 @@
   --font-heading: 'Safira March', Georgia, serif;
 }
 
-body {
-  font-family: var(--font-main);
+html, body {
+  height: 100%;
   margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: var(--font-main);
   background-color: var(--bg-color-pri);
   color: var(--txt-color-dk);
-  padding-top: 100px;
+  padding-top: 200px;
 }
 
 h1, h2, h3, h4 {
@@ -39,12 +46,12 @@ a {
   color: var(--txt-color-dk);
 }
 
-ul {
-  list-style-type: none;
-}
-
 a:hover {
   color: var(--txt-color-dk);
+}
+
+ul {
+  list-style-type: none;
 }
 
 header {
@@ -53,7 +60,7 @@ header {
   position: fixed;
   top: 0px;
   width: 100%;
-  z-index: 3;
+  z-index: 5;
 }
 
 nav {
@@ -105,13 +112,10 @@ nav ul li a.active {
   align-items: center;
 }
 
-.main {
-  padding: 150px 0;
+main {
   background-color: var(--bg-color-pri);
-}
-
-#index-section {
-  margin-bottom: 0;
+  flex: 1;
+  margin: 0 50px 30px 50px;
 }
 
 .row {
@@ -120,7 +124,7 @@ nav ul li a.active {
   justify-content: space-between;
 }
 
-.column-6 {
+.column {
   flex: 0 0 32%;
   margin-bottom: 30px;
 }
@@ -182,10 +186,6 @@ nav ul li a.active {
   text-align: center;
   color: #fff;
   padding: 20px;
-}
-
-#container-index {
-  margin: -50px auto;
 }
 
 .main-button a {
@@ -430,10 +430,6 @@ nav ul li a.active {
 ----------------------------------
 */
 
-.clothing-detail {
-  padding: 30px 0;
-}
-
 .clothing-details {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -523,6 +519,7 @@ footer {
   justify-content: space-between;
   background-color: var(--bg-color-sec);
   color: var(--txt-color-dk);
+  z-index: 4;
 }
 
 footer .logo {
