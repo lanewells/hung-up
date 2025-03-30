@@ -1,25 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+@font-face {
+  font-family: 'Safira March';
+  src: url('./assets/fonts/safira-march.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 * {
   box-sizing: border-box;
 }
 
+:root {
+  --bg-color-pri: #f2efe9;
+  --bg-color-sec: #e9e5dc;
+  --txt-color-dk: #262626;
+  --txt-color-lt: white;
+  --font-main: 'Josefin Sans', 'Helvetica Neue', sans-serif;
+  --font-heading: 'Safira March', Georgia, serif;
+}
+
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-main);
   margin: 0;
-  background-color: #fafafa;
-  color: #333333;
+  background-color: var(--bg-color-pri);
+  color: var(--txt-color-dk);
   padding-top: 100px;
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Poppins', sans-serif;
-  color: #333333;
+  font-family: var(--font-heading);
+  color: var(--txt-color-dk);
 }
 
 a {
   text-decoration: none;
-  color: #333333;
+  color: var(--txt-color-dk);
 }
 
 ul {
@@ -27,11 +44,11 @@ ul {
 }
 
 a:hover {
-  color: #333333;
+  color: var(--txt-color-dk);
 }
 
 header {
-  background-color: #3d3d3d;
+  background-color: var(--bg-color-sec);
   padding: 10px 20px;
   position: fixed;
   top: 0px;
@@ -64,21 +81,22 @@ nav ul {
 nav ul li a {
   font-weight: 500;
   padding: 10px 15px;
-  color: white;
+  color: var(--txt-color-dk);
   border: none;
   padding: 0.75rem 1.25rem;
   border-radius: 8px;
   cursor: pointer;
-  font-family: 'Poppins', sans-serif;
   transition: background-color 0.3s ease;
 }
 
 nav ul li a:hover {
-  background-color: #1e8fff99;
+  color: var(--txt-color-lt);
+  text-shadow: #6a6760 1px 0 25px;
 }
 
 nav ul li a.active {
-  background-color: #1e90ff;
+  background-color: var(--txt-color-dk);
+  color: var(--txt-color-lt);
 }
 
 .start {
@@ -87,13 +105,9 @@ nav ul li a.active {
   align-items: center;
 }
 
-nav h2 {
-  color: white;
-}
-
 .main {
   padding: 150px 0;
-  background-color: #fff;
+  background-color: var(--bg-color-pri);
 }
 
 #index-section {
@@ -507,7 +521,8 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #f0f0f0;
+  background-color: var(--bg-color-sec);
+  color: var(--txt-color-dk);
 }
 
 footer .logo {
@@ -522,18 +537,24 @@ footer ul {
 
 footer ul li a {
   text-decoration: none;
-  color: #2d2d2d;
   font-weight: 500;
   font-size: 16px;
 }
 
-footer ul li a.active {
-  color: #000;
+footer .start {
+  gap: 20px;
+}
+
+footer a:hover {
+  text-decoration: underline var(--txt-color-dk);
+}
+
+footer a.active {
+  text-decoration: double underline var(--txt-color-dk);
 }
 
 footer .credits p {
   font-size: 14px;
-  color: #535353;
 }
 
 /* media query 
