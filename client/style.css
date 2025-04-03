@@ -120,66 +120,54 @@ main {
 
 .row {
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-.column {
-  flex: 0 0 32%;
-  margin-bottom: 30px;
+.column-third {
+  flex: 0 0 30%;
 }
 
-.thumb {
+.hover-card {
   position: relative;
   overflow: hidden;
   width: 100%;
   height: 300px;
 }
 
-.thumb img {
+.hover-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
   border-radius: 10px;
+  z-index: 1;
+}
+
+.hover-card img:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: opacity 0.4s ease-in-out;
+  z-index: 2;
 }
 
 .inner-content {
-  padding: 20px;
-  background-color: #fff;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  z-index: 1;
+  margin: auto;
+  z-index: 3;
 }
 
 .inner-content h4 {
   position: absolute;
-  top: 15%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  color: white;
+  width: fit-content;
+  z-index: 3;
+  color: var(--txt-color-lt);
   text-align: center;
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 700;
-  margin-bottom: 20px;
-  font-size: 22px;
-  font-weight: 600;
-}
-
-.hover-content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  opacity: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: opacity 0.4s ease-in-out;
-  border-radius: 10px;
 }
 
 .hover-content .inner {
@@ -214,25 +202,25 @@ main {
 ----------------------------------
 ----------------------------------
 */
-.wardrobe-grid {
+.clothes-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 20px;
 }
 
-.wardrobe-item {
+.clothes-item {
   position: relative;
   overflow: hidden;
   border-radius: 10px;
 }
 
-.wardrobe-item img {
+.clothes-item img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-.wardrobe-details {
+.clothes-details {
   position: absolute;
   top: 0;
   left: 0;
@@ -249,15 +237,15 @@ main {
   font-size: 14px;
 }
 
-.wardrobe-item:hover .wardrobe-details {
+.clothes-item:hover .clothes-details {
   opacity: 1;
 }
 
-.wardrobe-details p {
+.clothes-details p {
   margin: 5px 0;
 }
 
-.wardrobe-details strong {
+.clothes-details strong {
   font-weight: 600;
 }
 
@@ -266,19 +254,19 @@ main {
 ----------------------------------
 */
 @media (max-width: 1024px) {
-  .wardrobe-grid {
+  .clothes-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (max-width: 768px) {
-  .wardrobe-grid {
+  .clothes-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 480px) {
-  .wardrobe-grid {
+  .clothes-grid {
     grid-template-columns: 1fr;
   }
 }
