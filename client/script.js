@@ -6,39 +6,49 @@ console.log("hello")
 async function populateClothes() {
   try {
     const response = await axios.get(`${baseURL}/clothes`)
-    const clothingItems = document.querySelectorAll(".wardrobe-item")
+    // const clothingItems = document.querySelectorAll(".clothes-item")
+    const clothes = response.data
 
-    response.data.forEach((clothing, index) => {
-      if (clothingItems[index]) {
-        const clothingItem = clothingItems[index]
+    // clothes template to clone - from html with placeholders
+    const clothesTemplate = document.querySelector(".clothes-item")
+    if (!clothesTemplate) {
+      console.error("Clothes template not found.")
+      return
+    }
 
-        const image = clothingItem.querySelector("img")
-        image.src = clothing.imageUrl
-        image.alt = clothing.name
+    const clothesGrid = document.querySelector(".clothes-grid")
+    clothesGrid.innerHTML = ""
 
-        const name = clothingItem.querySelector(".name-text")
-        name.textContent = clothing.name
+    clothes.forEach((clothing) => {
+      const clonedClothing = clothesTemplate.cloneNode(true)
+      clonedClothing.style.display = "block"
 
-        const clothingType = clothingItem.querySelector(".type-text")
-        clothingType.textContent = clothing.type
+      clonedClothing.querySelector(".clothes-image").src = clothing.imageUrl
+      clonedClothing.querySelector(".clothes-image").alt = clothing.name || "Clothing Item"
 
-        const subtype = clothingItem.querySelector(".subtype-text")
-        subtype.textContent = clothing.subtype
+      clonedClothing.querySelector(".name-text strong").textContent = clothing.name || "Unnamed"
+      clonedClothing.querySelector(".type-text strong").textContent = clothing.type || "Unknown"
+      clonedClothing.querySelector(".subtype-text strong").textContent = clothing.subtype || "Unknown"
+      clonedClothing.querySelector(".color-text strong").textContent = clothing.color || "No Color"
+      if (clothing._id) {
+        clonedClothing.setAttribute("data-id", clothing._id)
 
-        const color = clothingItem.querySelector(".color-text")
-        color.textContent = clothing.colors[0]
-
-        clothingItem.setAttribute("data-id", clothing._id)
-
-        clothingItem.addEventListener("click", () => {
+        clonedClothing.addEventListener("click", () => {
           window.location.href = `single-clothing.html?id=${clothing._id}`
         })
+      } else {
+        console.warn("Missing _id for clothing item:", clothing)
       }
+
+      clothesGrid.appendChild(clonedClothing)
     })
   } catch (error) {
-    console.error("Error getting clothes:", error.message)
+    console.error("Error fetching clothes:", error.message)
   }
 }
+
+
+
 
 // populate clothing details page
 async function populateClothingDetails() {
@@ -112,7 +122,7 @@ async function populateSingularType() {
 
     const response = await axios.get(`${baseURL}/clothes/type/${typeName}`)
 
-    const wardrobeItems = document.querySelectorAll(".wardrobe-item")
+    const wardrobeItems = document.querySelectorAll(".clothes-item")
 
     response.data.forEach((clothing, index) => {
       if (wardrobeItems[index]) {
