@@ -1,179 +1,179 @@
-/* font
-----------------------------------
-----------------------------------
-*/
-@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
-/* global
-----------------------------------
-----------------------------------
-*/
-body {
-  font-family: "Poppins", sans-serif;
+@font-face {
+  font-family: 'Safira March';
+  src: url('./assets/fonts/safira-march.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color-pri: #f2efe9;
+  --bg-color-sec: #e9e5dc;
+  --txt-color-dk: #262626;
+  --txt-color-lt: white;
+  --font-main: 'Josefin Sans', 'Helvetica Neue', sans-serif;
+  --font-heading: 'Safira March', Georgia, serif;
+}
+
+html, body {
+  height: 100%;
   margin: 0;
-  padding: 0;
-  background-color: #f9f9f9;
-  color: #2d2d2d;
-  line-height: 1.6;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: var(--font-main);
+  background-color: var(--bg-color-pri);
+  color: var(--txt-color-dk);
+  padding-top: 200px;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  color: var(--txt-color-dk);
 }
 
 a {
   text-decoration: none;
-  color: #2d2d2d;
+  color: var(--txt-color-dk);
 }
 
 a:hover {
-  color: #5c5c5c;
+  color: var(--txt-color-dk);
 }
 
-/* header
-----------------------------------
-----------------------------------
-*/
-
-.header-strip {
-  background-color: #f0f0f0;
-  padding: 10px 0;
-}
-
-.header-strip .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.main-nav {
-  display: flex;
-  align-items: center;
-}
-
-.main-nav .logo img {
-  max-width: 120px;
-}
-
-.main-nav ul {
-  display: flex;
+ul {
   list-style-type: none;
 }
 
-.main-nav ul li {
-  margin-left: 20px;
+header {
+  background-color: var(--bg-color-sec);
+  padding: 10px 20px;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 5;
 }
 
-.main-nav ul li a {
+nav {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 10px;
+}
+
+.logo {
+  padding: 20px;
+}
+
+.logo img {
+  max-width: 50px;
+}
+
+nav ul {
+  display: flex;
+  gap: 10px;
+}
+
+nav ul li a {
   font-weight: 500;
   padding: 10px 15px;
+  color: var(--txt-color-dk);
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.main-nav ul li a:hover {
-  background-color: #d1e0f0;
-  color: #fff;
-  border-radius: 5px;
+nav ul li a:hover {
+  color: var(--txt-color-lt);
+  text-shadow: #6a6760 1px 0 25px;
 }
 
-.main-nav ul li a.active {
-  background-color: #1e90ff;
-  color: white;
-  border-radius: 5px;
+nav ul li a.active {
+  background-color: var(--txt-color-dk);
+  color: var(--txt-color-lt);
 }
 
-/* main section 
-----------------------------------
-----------------------------------
-*/
-.main {
-  padding: 150px 0;
-  background-color: #fff;
+.start {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-#index-section {
-  margin-bottom: 0;
-}
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+main {
+  background-color: var(--bg-color-pri);
+  flex: 1;
+  margin: 0 50px 30px 50px;
 }
 
 .row {
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-.column-6 {
-  flex: 0 0 32%;
-  margin-bottom: 30px;
+.column-third {
+  flex: 0 0 30%;
 }
 
-.thumb {
+.hover-card {
   position: relative;
   overflow: hidden;
   width: 100%;
   height: 300px;
 }
 
-.thumb img {
+.hover-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
   border-radius: 10px;
+  z-index: 1;
+}
+
+.hover-card img:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: opacity 0.4s ease-in-out;
+  z-index: 2;
 }
 
 .inner-content {
-  padding: 20px;
-  background-color: #fff;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  z-index: 1;
+  margin: auto;
+  z-index: 3;
 }
 
 .inner-content h4 {
   position: absolute;
-  top: 15%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  color: white;
+  width: fit-content;
+  z-index: 3;
+  color: var(--txt-color-lt);
   text-align: center;
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 700;
-  margin-bottom: 20px;
-  font-size: 22px;
-  font-weight: 600;
-}
-
-.hover-content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  opacity: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: opacity 0.4s ease-in-out;
-  border-radius: 10px;
 }
 
 .hover-content .inner {
   text-align: center;
   color: #fff;
   padding: 20px;
-}
-
-.hung-up {
-  text-align: center;
-  justify-content: center;
-  font-size: 24px;
-  margin-bottom: -20px;
-}
-
-#container-index {
-  margin: -50px auto;
 }
 
 .main-button a {
@@ -202,25 +202,25 @@ a:hover {
 ----------------------------------
 ----------------------------------
 */
-.wardrobe-grid {
+.clothes-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 20px;
 }
 
-.wardrobe-item {
+.clothes-item {
   position: relative;
   overflow: hidden;
   border-radius: 10px;
 }
 
-.wardrobe-item img {
+.clothes-item img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-.wardrobe-details {
+.clothes-details {
   position: absolute;
   top: 0;
   left: 0;
@@ -237,15 +237,15 @@ a:hover {
   font-size: 14px;
 }
 
-.wardrobe-item:hover .wardrobe-details {
+.clothes-item:hover .clothes-details {
   opacity: 1;
 }
 
-.wardrobe-details p {
+.clothes-details p {
   margin: 5px 0;
 }
 
-.wardrobe-details strong {
+.clothes-details strong {
   font-weight: 600;
 }
 
@@ -254,19 +254,19 @@ a:hover {
 ----------------------------------
 */
 @media (max-width: 1024px) {
-  .wardrobe-grid {
+  .clothes-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (max-width: 768px) {
-  .wardrobe-grid {
+  .clothes-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 480px) {
-  .wardrobe-grid {
+  .clothes-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -418,10 +418,6 @@ a:hover {
 ----------------------------------
 */
 
-.clothing-detail {
-  padding: 30px 0;
-}
-
 .clothing-details {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -503,63 +499,47 @@ a:hover {
   background-color: #9c27b0;
 }
 
-/* footer 
-----------------------------------
-----------------------------------
-*/
-
 footer {
-  background-color: #f0f0f0;
-  padding: 20px 0;
-}
-
-footer .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.footer-row {
+  max-width: 100%;
+  padding: 20px 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: var(--bg-color-sec);
+  color: var(--txt-color-dk);
+  z-index: 4;
 }
 
-footer .logo img {
-  max-width: 100px;
-  margin-right: 20px;
+footer .logo {
+  padding: 0;
 }
 
 footer ul {
   display: flex;
   list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-footer ul li {
-  margin-left: 20px;
+  gap: 15px;
 }
 
 footer ul li a {
   text-decoration: none;
-  color: #2d2d2d;
   font-weight: 500;
+  font-size: 16px;
 }
 
-footer ul li a.active {
-  color: #000;
+footer .start {
+  gap: 20px;
 }
 
-footer .credits {
-  margin-left: auto;
-  padding-right: 10px;
+footer a:hover {
+  text-decoration: underline var(--txt-color-dk);
+}
+
+footer a.active {
+  text-decoration: double underline var(--txt-color-dk);
 }
 
 footer .credits p {
-  margin: 0;
   font-size: 14px;
-  color: #2d2d2d;
 }
 
 /* media query 
