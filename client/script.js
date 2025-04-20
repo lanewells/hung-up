@@ -29,7 +29,7 @@ async function populateClothes() {
       clonedClothing.querySelector(".name-text strong").textContent = clothing.name || "Unnamed"
       clonedClothing.querySelector(".type-text strong").textContent = clothing.type || "Unknown"
       clonedClothing.querySelector(".subtype-text strong").textContent = clothing.subtype || "Unknown"
-      clonedClothing.querySelector(".color-text strong").textContent = clothing.color || "No Color"
+      clonedClothing.querySelector(".color-text strong").textContent = clothing.colors || "No Color"
       if (clothing._id) {
         clonedClothing.setAttribute("data-id", clothing._id)
 
