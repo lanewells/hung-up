@@ -87,7 +87,6 @@ nav ul {
 
 nav ul li a {
   font-weight: 500;
-  padding: 10px 15px;
   color: var(--txt-color-dk);
   border: none;
   padding: 0.75rem 1.25rem;
@@ -465,6 +464,10 @@ main {
   width: 100%;
 }
 
+.details-info div {
+  margin-bottom: 30px;
+}
+
 .details-info p {
   font-size: 12px;
   margin: 5px 0;
@@ -510,16 +513,22 @@ main {
 .back-button {
   display: inline-block;
   margin-top: 50px;
-  padding: 12px 25px;
-  background-color: #2d2d2d;
-  color: #fff;
-  border-radius: 5px;
+  padding: 0.75rem 1.25rem;
+  background-color: var(--txt-color-dk);
+  color: var(--txt-color-lt);
   text-decoration: none;
   font-size: 18px;
+  font-weight: 500;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .back-button:hover {
-  background-color: #9c27b0;
+  background-color: var(--bg-color-sec);
+  color: var(--txt-color-dk);
 }
 
 footer {
