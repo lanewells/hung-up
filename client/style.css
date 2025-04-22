@@ -237,6 +237,11 @@ main {
   font-size: 14px;
 }
 
+.clothes-details .name-text {
+  margin-bottom: 15px;
+  font-size: 1.5em;
+}
+
 .clothes-item:hover .clothes-details {
   opacity: 1;
 }
@@ -293,41 +298,64 @@ main {
   width: 100%;
   height: auto;
   display: block;
+  padding-bottom: 35px;
 }
 
 .outfit-details {
   position: absolute;
-  bottom: -150px;
+  min-height: 220px;
+  max-height: 240px;
+  bottom: 0;
   left: 0;
   width: 100%;
   padding: 20px;
-  background-color: #f0f0f0;
-  transition: bottom 0.4s ease-in-out;
+  background-color: var(--bg-color-sec);
+  transition: transform 0.4s ease-in-out;
+  transform: translateY(160px);
+  overflow: hidden;
 }
 
 .outfit-item:hover .outfit-details {
-  bottom: 0;
+  transform: translateY(0);
 }
 
 .outfit-details p {
   margin: 5px 0;
 }
 
-.outfit-details strong {
-  font-weight: 600;
+.outfit-row {
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.outfit-text {
+  font-size: 1.5em;
+}
+
+.occasion-text {
+  font-size: .8em;
+  text-transform: uppercase;
 }
 
 .outfit-clothing-images {
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
-  margin-right: 10%;
+  max-height: 100px;
 }
 
 .outfit-clothing-images img {
   width: 20%;
   height: auto;
+  object-fit: contain;
   border-radius: 5px;
+  background-color: white;
+  padding: 0;
+}
+
+#outfits-section .icon {
+  font-size: 1.2m;
+  color: slategray;
 }
 
 /* outfits page - media query
@@ -437,10 +465,6 @@ main {
   width: 100%;
 }
 
-.details-info {
-  margin-bottom: 0;
-}
-
 .details-info p {
   font-size: 12px;
   margin: 5px 0;
@@ -454,7 +478,6 @@ main {
   color: #2d2d2d;
   font-size: 15pt;
   margin-top: 12px;
-  line-height: 60%;
 }
 
 .ratings {

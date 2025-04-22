@@ -27,9 +27,9 @@ async function populateClothes() {
       clonedClothing.querySelector(".clothes-image").alt = clothing.name || "Clothing Item"
 
       clonedClothing.querySelector(".name-text strong").textContent = clothing.name || "Unnamed"
-      clonedClothing.querySelector(".type-text strong").textContent = clothing.type || "Unknown"
-      clonedClothing.querySelector(".subtype-text strong").textContent = clothing.subtype || "Unknown"
-      clonedClothing.querySelector(".color-text strong").textContent = clothing.colors || "No Color"
+      clonedClothing.querySelector(".type-text strong").textContent = `Type: ${clothing.type}` || "Unknown"
+      clonedClothing.querySelector(".subtype-text strong").textContent = `Style: ${clothing.subtype}` || "Unknown"
+      clonedClothing.querySelector(".color-text strong").textContent = `Color: ${clothing.colors}` || "No Color"
       if (clothing._id) {
         clonedClothing.setAttribute("data-id", clothing._id)
 
@@ -175,7 +175,7 @@ async function populateOutfits() {
       clonedOutfit.querySelector(".outfit-text strong").textContent =
         outfit.occasion
       clonedOutfit.querySelector(".occasion-text strong").textContent =
-        outfit.weather
+        `${outfit.weather} weather`
 
       const clothingImagesContainer = clonedOutfit.querySelector(
         ".outfit-clothing-images"
