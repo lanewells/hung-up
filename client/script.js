@@ -47,6 +47,55 @@ async function populateClothes() {
   }
 }
 
+// set star ratings feature
+let userRatings = JSON.parse(localStorage.getItem("userRatings")) || {}
+
+function setStarRatings(clothingId) {
+  const categories = ["comfort", "confidence", "warmth"];
+
+  if (!userRatings[clothingId]) {
+    userRatings[clothingId] = {
+      comfort: 0,
+      confidence: 0,
+      warmth: 0
+    };
+  }
+
+  categories.forEach((category) => {
+    const starContainer = document.getElementById(`${category}-stars`);
+    const stars = starContainer.querySelectorAll("i");
+    const savedRating = userRatings[clothingId][category];
+
+    // render the saved rating
+    stars.forEach((s, index) => {
+      if (index < savedRating) {
+        s.classList.add("rated");
+      } else {
+        s.classList.remove("rated");
+      }
+    });
+
+    // set up the click behavior
+    stars.forEach((star) => {
+      star.addEventListener("click", () => {
+        const rating = parseInt(star.dataset.rating);
+        userRatings[clothingId][category] = rating;
+        localStorage.setItem("userRatings", JSON.stringify(userRatings));
+
+        // update visual state
+        stars.forEach((s, index) => {
+          if (index < rating) {
+            s.classList.add("rated");
+          } else {
+            s.classList.remove("rated");
+          }
+        });
+
+        console.log(userRatings);
+      });
+    });
+  });
+}
 
 
 
@@ -66,6 +115,8 @@ async function populateClothingDetails() {
       document.querySelector("#type-text").textContent = clothing.type
       document.querySelector("#color-text").textContent = clothing.colors
       document.querySelector("#size-text").textContent = clothing.size
+
+      setStarRatings(clothingId)
     } catch (error) {
       console.error("Error getting clothing item details:", error.message)
     }
@@ -73,6 +124,7 @@ async function populateClothingDetails() {
     console.error("No clothing ID found in URL")
   }
 }
+
 
 // types page - delay closing and expanding of submenus
 document.querySelectorAll(".drawer-item").forEach((item) => {

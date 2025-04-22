@@ -46,10 +46,6 @@ a {
   color: var(--txt-color-dk);
 }
 
-a:hover {
-  color: var(--txt-color-dk);
-}
-
 ul {
   list-style-type: none;
 }
@@ -446,16 +442,15 @@ main {
 */
 
 .clothing-details {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: center;
+  display: inline-flex;
+  gap: 60px;
+  align-items: top;
 }
 
 .image-container img {
-  width: 100%;
   max-width: 600px;
   height: auto;
+  height: 60vh;
   border-radius: 10px;
 }
 
@@ -501,34 +496,39 @@ main {
 
 .stars i {
   font-size: 28px;
-  color: #ddd;
+  color: var(--bg-color-sec);
   cursor: pointer;
   margin: 0 0px;
 }
 
-.stars i.active {
-  color: #ffd700;
+.stars i:hover {
+  color: #d3cfc7;
+}
+
+.stars i.rated {
+  color: gold;
 }
 
 .back-button {
   display: inline-block;
   margin-top: 50px;
   padding: 0.75rem 1.25rem;
-  background-color: var(--txt-color-dk);
+  background-color: var(--bg-color-sec);
   color: var(--txt-color-lt);
+  text-shadow: #7a766d 1px 0 25px;
   text-decoration: none;
-  font-size: 18px;
-  font-weight: 500;
-  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: 400;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .back-button:hover {
-  background-color: var(--bg-color-sec);
-  color: var(--txt-color-dk);
+  background-color: var(--txt-color-dk);
+  color: var(--txt-color-lt);
+
 }
 
 footer {
