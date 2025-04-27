@@ -27,9 +27,9 @@ async function populateClothes() {
       clonedClothing.querySelector(".clothes-image").alt = clothing.name || "Clothing Item"
 
       clonedClothing.querySelector(".name-text strong").textContent = clothing.name || "Unnamed"
-      clonedClothing.querySelector(".type-text strong").textContent = clothing.type || "Unknown"
-      clonedClothing.querySelector(".subtype-text strong").textContent = clothing.subtype || "Unknown"
-      clonedClothing.querySelector(".color-text strong").textContent = clothing.colors || "No Color"
+      clonedClothing.querySelector(".type-text strong").textContent = `Type: ${clothing.type}` || "Unknown"
+      clonedClothing.querySelector(".subtype-text strong").textContent = `Style: ${clothing.subtype}` || "Unknown"
+      clonedClothing.querySelector(".color-text strong").textContent = `Color: ${clothing.colors}` || "No Color"
       if (clothing._id) {
         clonedClothing.setAttribute("data-id", clothing._id)
 
@@ -47,6 +47,52 @@ async function populateClothes() {
   }
 }
 
+// set star ratings feature
+let userRatings = JSON.parse(localStorage.getItem("userRatings")) || {}
+
+function setStarRatings(clothingId) {
+  const categories = ["comfort", "confidence", "warmth"]
+
+  if (!userRatings[clothingId]) {
+    userRatings[clothingId] = {
+      comfort: 0,
+      confidence: 0,
+      warmth: 0
+    }
+  }
+
+  categories.forEach((category) => {
+    const starContainer = document.getElementById(`${category}-stars`)
+    const stars = starContainer.querySelectorAll("i")
+    const savedRating = userRatings[clothingId][category]
+
+    stars.forEach((s, index) => {
+      if (index < savedRating) {
+        s.classList.add("rated")
+      } else {
+        s.classList.remove("rated")
+      }
+    })
+
+    stars.forEach((star) => {
+      star.addEventListener("click", () => {
+        const rating = parseInt(star.dataset.rating)
+        userRatings[clothingId][category] = rating;
+        localStorage.setItem("userRatings", JSON.stringify(userRatings))
+
+        stars.forEach((s, index) => {
+          if (index < rating) {
+            s.classList.add("rated")
+          } else {
+            s.classList.remove("rated")
+          }
+        })
+
+        console.log(userRatings)
+      })
+    })
+  })
+}
 
 
 
@@ -66,6 +112,8 @@ async function populateClothingDetails() {
       document.querySelector("#type-text").textContent = clothing.type
       document.querySelector("#color-text").textContent = clothing.colors
       document.querySelector("#size-text").textContent = clothing.size
+
+      setStarRatings(clothingId)
     } catch (error) {
       console.error("Error getting clothing item details:", error.message)
     }
@@ -73,6 +121,7 @@ async function populateClothingDetails() {
     console.error("No clothing ID found in URL")
   }
 }
+
 
 // types page - delay closing and expanding of submenus
 document.querySelectorAll(".drawer-item").forEach((item) => {
@@ -175,7 +224,7 @@ async function populateOutfits() {
       clonedOutfit.querySelector(".outfit-text strong").textContent =
         outfit.occasion
       clonedOutfit.querySelector(".occasion-text strong").textContent =
-        outfit.weather
+        `${outfit.weather} weather`
 
       const clothingImagesContainer = clonedOutfit.querySelector(
         ".outfit-clothing-images"
