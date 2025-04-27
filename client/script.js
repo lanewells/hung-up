@@ -51,50 +51,47 @@ async function populateClothes() {
 let userRatings = JSON.parse(localStorage.getItem("userRatings")) || {}
 
 function setStarRatings(clothingId) {
-  const categories = ["comfort", "confidence", "warmth"];
+  const categories = ["comfort", "confidence", "warmth"]
 
   if (!userRatings[clothingId]) {
     userRatings[clothingId] = {
       comfort: 0,
       confidence: 0,
       warmth: 0
-    };
+    }
   }
 
   categories.forEach((category) => {
-    const starContainer = document.getElementById(`${category}-stars`);
-    const stars = starContainer.querySelectorAll("i");
-    const savedRating = userRatings[clothingId][category];
+    const starContainer = document.getElementById(`${category}-stars`)
+    const stars = starContainer.querySelectorAll("i")
+    const savedRating = userRatings[clothingId][category]
 
-    // render the saved rating
     stars.forEach((s, index) => {
       if (index < savedRating) {
-        s.classList.add("rated");
+        s.classList.add("rated")
       } else {
-        s.classList.remove("rated");
+        s.classList.remove("rated")
       }
-    });
+    })
 
-    // set up the click behavior
     stars.forEach((star) => {
       star.addEventListener("click", () => {
-        const rating = parseInt(star.dataset.rating);
+        const rating = parseInt(star.dataset.rating)
         userRatings[clothingId][category] = rating;
-        localStorage.setItem("userRatings", JSON.stringify(userRatings));
+        localStorage.setItem("userRatings", JSON.stringify(userRatings))
 
-        // update visual state
         stars.forEach((s, index) => {
           if (index < rating) {
-            s.classList.add("rated");
+            s.classList.add("rated")
           } else {
-            s.classList.remove("rated");
+            s.classList.remove("rated")
           }
-        });
+        })
 
-        console.log(userRatings);
-      });
-    });
-  });
+        console.log(userRatings)
+      })
+    })
+  })
 }
 
 
