@@ -91,7 +91,7 @@ nav ul li a {
   transition: background-color 0.3s ease;
 }
 
-nav ul li a:hover {
+nav ul li a:hover, #index-section a {
   color: var(--txt-color-lt);
   text-shadow: #6a6760 1px 0 25px;
 }
@@ -99,6 +99,10 @@ nav ul li a:hover {
 nav ul li a.active {
   background-color: var(--txt-color-dk);
   color: var(--txt-color-lt);
+}
+
+#index-section a:hover {
+  text-shadow: var(--txt-color-dk) 0px 0 4px;
 }
 
 .start {
@@ -374,66 +378,96 @@ main {
 ----------------------------------
 */
 
-#drawers-section{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  min-height: 100vh;
-  background-color: #f8f4ef;
-}
-
 .dresser {
   display: grid;
-  grid-template-columns: repeat(2, 200px);
-  grid-template-rows: repeat(3, 120px);
   gap: 1.5rem;
   position: relative;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
 }
 
 .drawer {
   position: relative;
-  background-color: #c5a880;
-  border: 2px solid #8b6e4f;
-  border-radius: 8px;
-  box-shadow: inset 0 2px 6px rgba(0,0,0,0.2);
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
   transition: transform 0.2s ease;
   overflow: hidden;
+  min-height: 2em;
+  height: 8em;
+  background-color: var(--bg-color-sec);
+  background-size: cover;
+  background-position: center;
+}
+
+.drawer.drawer-one {
+  background-image: url('/assets/drawer-one.jpg');
+  background-position: center;
+}
+
+.drawer.drawer-two {
+  background-image: url('/assets/drawer-two.jpg');
+  background-position: center;
+}
+
+.drawer.drawer-three {
+  background-image: url('/assets/drawer-three.jpg');
+  background-position: center;
+}
+
+.drawer.drawer-four {
+  background-image: url('/assets/drawer-four.jpg');
+  background-position: center;
+}
+
+.drawer.drawer-five {
+  background-image: url('/assets/drawer-five.jpg');
+  background-position: center;
+}
+
+.drawer.drawer-six {
+  background-image: url('/assets/drawer-six.jpg');
+  background-position: center;
 }
 
 .drawer::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-color-sec);
+  transform-origin: 0 top 0;
+  transform: scaleY(0);
+  transition: transform .4s ease-out;
+  z-index: 1;
+}
+
+.drawer:hover::before {
+  transform: scaleY(1);
+}
+
+.drawer:hover {
+  background-color: var(--txt-color-dk);
+}
+
+.drawer::after {
   content: attr(data-label);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-weight: bold;
-  color: #3e2c1c;
   z-index: 2;
+  color:  white;
+  font-weight: 400;
+  font-size: 1.4rem;
+  pointer-events: none;
 }
 
-.drawer::after {
-  content: "";
-  position: absolute;
-  bottom: -100%;
-  left: 0;
-  right: 0;
-  height: 100%;
-  background-color: black;
-  opacity: 0;
-  transition: opacity 0.2s ease, bottom 0.2s ease;
-  z-index: 1;
-}
 
-.drawer:hover {
-  transform: translateY(-10px);
-}
 
-.drawer:hover::after {
-  bottom: 0;
-  opacity: 1;
-}
 
 /* drawers page - media query
 ----------------------------------
