@@ -460,11 +460,12 @@ main {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
-  color: black;
-  font-weight: bold;
-  font-size: 1.5rem;
+  color:  white;
+  font-weight: 400;
+  font-size: 1.4rem;
   pointer-events: none;
 }
+
 
 
 
