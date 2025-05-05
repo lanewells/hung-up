@@ -11,23 +11,30 @@ I created this project with the vision of an application that lets users:
 - Enter details, values, and images for their clothing pieces and outfits
 - View and sort their clothing by type
 
-## ERD
+## Current Stage of Development 
 
-![ERD Chart](/assets/readme/ERD.png)
+### Index Page  
 
-## Wireframing
 
-![Clothes Page](/assets/readme/Clothing1.png)
+## Early Stages 
 
-![Clothing Details Page](/assets/readme/Clothing2.png)
+### ERD
 
-![Outfits Page](/assets/readme/Outfits1.png)
+![ERD Chart](/client/assets/readme/ERD.png)
 
-![Outfit Details Page](/assets/readme/Outfit2.png)
+### Wireframing
 
-![User CRUD Page - Outfit](/assets/readme/CRUD.png)
+![Clothes Page](/client/assets/readme/Clothing1.png)
 
-![User CRUD Page - Clothing](/assets/readme/CRUDClothing.png)
+![Clothing Details Page](/client/assets/readme/Clothing2.png)
+
+![Outfits Page](/client/assets/readme/Outfits1.png)
+
+![Outfit Details Page](/client/assets/readme/Outfit2.png)
+
+![User CRUD Page - Outfit](/client/assets/readme/CRUD.png)
+
+![User CRUD Page - Clothing](/client/assets/readme/CRUDClothing.png)
 
 ## Goals:
 
