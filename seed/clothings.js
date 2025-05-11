@@ -6,7 +6,7 @@ const seeding = async () => {
   const clothes = [
     {
       name: "Orange drawstring shorts",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/orange-shorts.jpg",
       type: "Shorts",
       subtype: "Bermuda",
       colors: ["Orange"],
@@ -21,7 +21,7 @@ const seeding = async () => {
     },
     {
       name: "Light wash jean shorts",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/light-wash-jean-shorts.jpg",
       type: "Shorts",
       subtype: "Denim",
       colors: ["Blue"],
@@ -36,7 +36,7 @@ const seeding = async () => {
     },
     {
       name: "Blue running shorts",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/blue_running_shorts.jpg",
       type: "Shorts",
       subtype: "Athletic",
       colors: ["Blue"],
@@ -51,7 +51,7 @@ const seeding = async () => {
     },
     {
       name: "Black spandex shorts",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/black-spandex-shorts.jpg",
       type: "Shorts",
       subtype: "Spandex",
       colors: ["Black"],
@@ -66,7 +66,7 @@ const seeding = async () => {
     },
     {
       name: "Low-rise blue shorts",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/low-rise-jean-shorts.jpg",
       type: "Shorts",
       subtype: "Low-rise",
       colors: ["Blue"],
@@ -81,7 +81,7 @@ const seeding = async () => {
     },
     {
       name: "High-waisted white shorts",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/white-shorts.jpg",
       type: "Shorts",
       subtype: "High-waisted",
       colors: ["White"],
@@ -96,7 +96,7 @@ const seeding = async () => {
     },
     {
       name: "Blue jeans",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/blue-jeans.jpg",
       type: "Pants",
       subtype: "Jeans",
       colors: ["Blue"],
@@ -111,7 +111,7 @@ const seeding = async () => {
     },
     {
       name: "Khaki chinos",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/khaki-chinos.jpg",
       type: "Pants",
       subtype: "Chinos",
       colors: ["Khaki"],
@@ -126,7 +126,7 @@ const seeding = async () => {
     },
     {
       name: "Olive cargo pants",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/olive-cargo-pants.jpg",
       type: "Pants",
       subtype: "Cargo",
       colors: ["Olive"],
@@ -141,7 +141,7 @@ const seeding = async () => {
     },
     {
       name: "Grey joggers",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/grey-joggers.jpg",
       type: "Pants",
       subtype: "Joggers",
       colors: ["Grey"],
@@ -156,7 +156,7 @@ const seeding = async () => {
     },
     {
       name: "Grey leggings",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/grey-leggings.jpg",
       type: "Pants",
       subtype: "Leggings",
       colors: ["Grey"],
@@ -171,7 +171,7 @@ const seeding = async () => {
     },
     {
       name: "Pink mini skirt",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/pink-skirt.jpg",
       type: "Skirts",
       subtype: "Mini",
       colors: ["Pink"],
@@ -186,7 +186,7 @@ const seeding = async () => {
     },
     {
       name: "Black tennis skirt",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/tennis-skirt.jpg",
       type: "Skirts",
       subtype: "Tennis",
       colors: ["Black"],
@@ -201,7 +201,7 @@ const seeding = async () => {
     },
     {
       name: "Brown maxi skirt",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/maxi-skirt.jpg",
       type: "Skirts",
       subtype: "Maxi",
       colors: ["Brown"],
@@ -216,7 +216,7 @@ const seeding = async () => {
     },
     {
       name: "Blue A-line skirt",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/blue-skirt.jpg",
       type: "Skirts",
       subtype: "A-line",
       colors: ["Blue"],
@@ -231,7 +231,7 @@ const seeding = async () => {
     },
     {
       name: "Yellow skort",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/yellow-skort.jpg",
       type: "Skirts",
       subtype: "Skort",
       colors: ["Yellow"],
@@ -246,7 +246,7 @@ const seeding = async () => {
     },
     {
       name: "White graphic tee",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/white-tee.jpg",
       type: "Tees",
       subtype: "Graphic",
       colors: ["White"],
@@ -261,7 +261,7 @@ const seeding = async () => {
     },
     {
       name: "Red v-neck tee",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/red-v-neck.jpg",
       type: "Tees",
       subtype: "V-Neck",
       colors: ["Red"],
@@ -276,7 +276,7 @@ const seeding = async () => {
     },
     {
       name: "Teal crew neck tee",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/teal-crew-neck.jpg",
       type: "Tees",
       subtype: "Crew neck",
       colors: ["Teal"],
@@ -291,7 +291,7 @@ const seeding = async () => {
     },
     {
       name: "Blue long sleeve tee",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/blue-long-sleeve.jpg",
       type: "Tees",
       subtype: "Long sleeve",
       colors: ["Blue"],
@@ -306,7 +306,7 @@ const seeding = async () => {
     },
     {
       name: "White button-down blouse",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/white-button-down.jpg",
       type: "Blouses",
       subtype: "Button-down",
       colors: ["White"],
@@ -321,7 +321,7 @@ const seeding = async () => {
     },
     {
       name: "Purple peplum blouse",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/purple-peplum.jpg",
       type: "Blouses",
       subtype: "Peplum",
       colors: ["Purple"],
@@ -336,7 +336,7 @@ const seeding = async () => {
     },
     {
       name: "Mauve wrap blouse",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/mauve-wrap-blouse.jpg",
       type: "Blouses",
       subtype: "Wrap",
       colors: ["Mauve"],
@@ -351,7 +351,7 @@ const seeding = async () => {
     },
     {
       name: "Pink sleeveless blouse",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/pink-sleeveless.jpg",
       type: "Blouses",
       subtype: "Sleeveless",
       colors: ["Pink"],
@@ -366,7 +366,7 @@ const seeding = async () => {
     },
     {
       name: "Red halter tank",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/red-halter.jpg",
       type: "Tanks",
       subtype: "Halter",
       colors: ["Red"],
@@ -381,7 +381,7 @@ const seeding = async () => {
     },
     {
       name: "Black racerback tank",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/black-racerback.jpg",
       type: "Tanks",
       subtype: "Racerback",
       colors: ["Black"],
@@ -396,7 +396,7 @@ const seeding = async () => {
     },
     {
       name: "Taupe muscle tank",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/taupe-muscle-tank.jpg",
       type: "Tanks",
       subtype: "Muscle",
       colors: ["Taupe"],
@@ -411,7 +411,7 @@ const seeding = async () => {
     },
     {
       name: "Black spaghetti strap tank",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/black-tank.jpg",
       type: "Tanks",
       subtype: "Spaghetti strap",
       colors: ["Black"],
@@ -426,7 +426,7 @@ const seeding = async () => {
     },
     {
       name: "Rainbow cardigan sweater",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/rainbow-cardigan.jpg",
       type: "Sweaters",
       subtype: "Cardigan",
       colors: ["Rainbow"],
@@ -441,7 +441,7 @@ const seeding = async () => {
     },
     {
       name: "Teal pullover sweater",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/teal-pullover.jpg",
       type: "Sweaters",
       subtype: "Pullover",
       colors: ["Teal"],
@@ -456,7 +456,7 @@ const seeding = async () => {
     },
     {
       name: "Cream turtleneck sweater",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/cream-turtleneck.jpg",
       type: "Sweaters",
       subtype: "Turtleneck",
       colors: ["Cream"],
@@ -470,11 +470,11 @@ const seeding = async () => {
       workAppropriate: true
     },
     {
-      name: "Gray crewneck sweater",
-      imageUrl: "url_to_image",
+      name: "Grey crewneck sweater",
+      imageUrl: "https://hung-up.onrender.com/client/assets/grey-crewneck.jpg",
       type: "Sweaters",
       subtype: "Crewneck",
-      colors: ["Gray"],
+      colors: ["Grey"],
       size: "M",
       ratings: {
         comfort: 4,
@@ -486,7 +486,7 @@ const seeding = async () => {
     },
     {
       name: "Burgundy shift dress",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/red-dress.jpg",
       type: "Dresses",
       subtype: "Shift",
       colors: ["Burgundy"],
@@ -501,7 +501,7 @@ const seeding = async () => {
     },
     {
       name: "Little black dress",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/little-black-dress.jpg",
       type: "Dresses",
       subtype: "Little black",
       colors: ["Black"],
@@ -516,7 +516,7 @@ const seeding = async () => {
     },
     {
       name: "White slip dress",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/white-slip-dress.jpg",
       type: "Dresses",
       subtype: "Slip",
       colors: ["White"],
@@ -531,7 +531,7 @@ const seeding = async () => {
     },
     {
       name: "Turquoise bodycon dress",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/turquoise-bodycon.jpg",
       type: "Dresses",
       subtype: "Bodycon",
       colors: ["Turquoise"],
@@ -546,7 +546,7 @@ const seeding = async () => {
     },
     {
       name: "Blush ruffle dress",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/blush-ruffle-dress.jpg",
       type: "Dresses",
       subtype: "Ruffle",
       colors: ["Blush"],
@@ -561,7 +561,7 @@ const seeding = async () => {
     },
     {
       name: "Navy romper jumpsuit",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/navy-romper.jpg",
       type: "Jumpsuits",
       subtype: "Romper",
       colors: ["Navy"],
@@ -576,7 +576,7 @@ const seeding = async () => {
     },
     {
       name: "Black wide leg jumpsuit",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/black-jumpsuit.jpg",
       type: "Jumpsuits",
       subtype: "Wide leg",
       colors: ["Black"],
@@ -591,7 +591,7 @@ const seeding = async () => {
     },
     {
       name: "Marine professional jumpsuit",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/marine-business-jumpsuit.jpg",
       type: "Jumpsuits",
       subtype: "Professional",
       colors: ["Marine"],
@@ -606,7 +606,7 @@ const seeding = async () => {
     },
     {
       name: "Forest green utility jumpsuit",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/utility-jumpsuit.jpg",
       type: "Jumpsuits",
       subtype: "Utility",
       colors: ["Forest green"],
@@ -621,7 +621,7 @@ const seeding = async () => {
     },
     {
       name: "Denim overalls",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/denim-overalls.jpg",
       type: "Overalls",
       subtype: "Denim",
       colors: ["Blue"],
@@ -636,7 +636,7 @@ const seeding = async () => {
     },
     {
       name: "Camel corduroy overalls",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/camel-corduroy-coveralls.jpg",
       type: "Overalls",
       subtype: "Corduroy",
       colors: ["Camel"],
@@ -651,7 +651,7 @@ const seeding = async () => {
     },
     {
       name: "Black shortalls",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/black-shortalls.jpg",
       type: "Overalls",
       subtype: "Shortalls",
       colors: ["Black"],
@@ -666,7 +666,7 @@ const seeding = async () => {
     },
     {
       name: "White low-top sneakers",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/white-low-top-sneakers.jpg",
       type: "Sneakers",
       subtype: "Low-top",
       colors: ["White"],
@@ -681,7 +681,7 @@ const seeding = async () => {
     },
     {
       name: "White high-top sneakers",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/white-high-tops.jpg",
       type: "Sneakers",
       subtype: "High-top",
       colors: ["White"],
@@ -696,7 +696,7 @@ const seeding = async () => {
     },
     {
       name: "Red slip-on sneakers",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/red-slip-ons.jpg",
       type: "Sneakers",
       subtype: "Slip-on",
       colors: ["Red"],
@@ -711,7 +711,7 @@ const seeding = async () => {
     },
     {
       name: "Grey running sneakers",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/grey-sneakers.jpg",
       type: "Sneakers",
       subtype: "Running",
       colors: ["Grey"],
@@ -726,7 +726,7 @@ const seeding = async () => {
     },
     {
       name: "Brown cowboy boots",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/brown-cowboy.jpg",
       type: "Boots",
       subtype: "Cowboy",
       colors: ["Brown"],
@@ -741,7 +741,7 @@ const seeding = async () => {
     },
     {
       name: "Black knee-high boots",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/black-knee-highs.jpg",
       type: "Boots",
       subtype: "Knee-high",
       colors: ["Black"],
@@ -756,7 +756,7 @@ const seeding = async () => {
     },
     {
       name: "Tan steel-toed boots",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/steel-toed-boots.jpg",
       type: "Boots",
       subtype: "Steel-toed",
       colors: ["Tan"],
@@ -771,7 +771,7 @@ const seeding = async () => {
     },
     {
       name: "Blue snow boots",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/blue-snow-boots.jpg",
       type: "Boots",
       subtype: "Snow",
       colors: ["Blue"],
@@ -786,7 +786,7 @@ const seeding = async () => {
     },
     {
       name: "Grey oxfords",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/grey-oxfords.jpg",
       type: "Specialty Shoes",
       subtype: "Oxfords",
       colors: ["Grey"],
@@ -801,7 +801,7 @@ const seeding = async () => {
     },
     {
       name: "Blush heels",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/blush-heels.jpg",
       type: "Specialty Shoes",
       subtype: "Heels",
       colors: ["Blush"],
@@ -816,7 +816,7 @@ const seeding = async () => {
     },
     {
       name: "Hot pink platforms",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/pink-platforms.jpg",
       type: "Specialty Shoes",
       subtype: "Platforms",
       colors: ["Hot pink"],
@@ -831,7 +831,7 @@ const seeding = async () => {
     },
     {
       name: "Red crocs",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/red-crocs.jpg",
       type: "Specialty Shoes",
       subtype: "Crocs",
       colors: ["Red"],
@@ -846,7 +846,7 @@ const seeding = async () => {
     },
     {
       name: "Tan birks",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/tan-birks.jpg",
       type: "Sandals",
       subtype: "Birks",
       colors: ["Tan"],
@@ -861,7 +861,7 @@ const seeding = async () => {
     },
     {
       name: "Nude espadrilles",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/nude-espadrilles.jpg",
       type: "Sandals",
       subtype: "Espadrilles",
       colors: ["Nude"],
@@ -876,7 +876,7 @@ const seeding = async () => {
     },
     {
       name: "Yellow flip-flops",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/yellow-flip-flops.jpg",
       type: "Sandals",
       subtype: "Flip-flops",
       colors: ["Yellow"],
@@ -891,7 +891,7 @@ const seeding = async () => {
     },
     {
       name: "Charcoal slides",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/charcoal-slides.jpg",
       type: "Sandals",
       subtype: "Slides",
       colors: ["Charcoal"],
@@ -906,7 +906,7 @@ const seeding = async () => {
     },
     {
       name: "Green baseball hat",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/green-baseball-cap.jpg",
       type: "Hats",
       subtype: "Baseball",
       colors: ["Green"],
@@ -921,7 +921,7 @@ const seeding = async () => {
     },
     {
       name: "Yellow bucket hat",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/yellow-bucket-hat.jpg",
       type: "Hats",
       subtype: "Bucket",
       colors: ["Yellow"],
@@ -936,7 +936,7 @@ const seeding = async () => {
     },
     {
       name: "Red beanie",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/red-beanie.jpg",
       type: "Hats",
       subtype: "Beanie",
       colors: ["Red"],
@@ -951,7 +951,7 @@ const seeding = async () => {
     },
     {
       name: "Blue visor",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/blue-visor.jpg",
       type: "Hats",
       subtype: "Visor",
       colors: ["Blue"],
@@ -966,7 +966,7 @@ const seeding = async () => {
     },
     {
       name: "Black leather belt",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/black-leather-belt.jpg",
       type: "Belts",
       subtype: "Leather",
       colors: ["Black"],
@@ -981,7 +981,7 @@ const seeding = async () => {
     },
     {
       name: "Off-white canvas belt",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/canvas-belt.jpg",
       type: "Belts",
       subtype: "Canvas",
       colors: ["Off-white"],
@@ -996,7 +996,7 @@ const seeding = async () => {
     },
     {
       name: "Tan braided belt",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/braided-belt.jpg",
       type: "Belts",
       subtype: "Braided",
       colors: ["Tan"],
@@ -1011,7 +1011,7 @@ const seeding = async () => {
     },
     {
       name: "Brown buckled belt",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/brown-buckle-belt.jpg",
       type: "Belts",
       subtype: "Buckled",
       colors: ["Brown"],
@@ -1026,7 +1026,7 @@ const seeding = async () => {
     },
     {
       name: "Nude trench coat",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/trench-coat.jpg",
       type: "Coats",
       subtype: "Trench",
       colors: ["Nude"],
@@ -1041,7 +1041,7 @@ const seeding = async () => {
     },
     {
       name: "Black puffer coat",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/black-puffer-jacket.jpg",
       type: "Coats",
       subtype: "Puffer",
       colors: ["Black"],
@@ -1056,7 +1056,7 @@ const seeding = async () => {
     },
     {
       name: "Sage green snow coat",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/sage-green-snow-jacket.jpg",
       type: "Coats",
       subtype: "Snow",
       colors: ["Sage green"],
@@ -1071,7 +1071,7 @@ const seeding = async () => {
     },
     {
       name: "Red parka",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/red-parka.jpg",
       type: "Coats",
       subtype: "Parka",
       colors: ["Red"],
@@ -1086,7 +1086,7 @@ const seeding = async () => {
     },
     {
       name: "Brown bomber jacket",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/bomber-jacket.jpg",
       type: "Jackets",
       subtype: "Bomber",
       colors: ["Brown"],
@@ -1101,7 +1101,7 @@ const seeding = async () => {
     },
     {
       name: "Brown leather jacket",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/brown-leather-jacket.jpg",
       type: "Jackets",
       subtype: "Leather",
       colors: ["Brown"],
@@ -1116,7 +1116,7 @@ const seeding = async () => {
     },
     {
       name: "Navy blazer",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/navy-blazer.jpg",
       type: "Jackets",
       subtype: "Blazer",
       colors: ["Navy"],
@@ -1131,7 +1131,7 @@ const seeding = async () => {
     },
     {
       name: "Blue jean jacket",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/jean-jacket.jpg",
       type: "Jackets",
       subtype: "Jean",
       colors: ["Blue"],
@@ -1146,7 +1146,7 @@ const seeding = async () => {
     },
     {
       name: "Purple windbreaker",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/purple-windbreaker.jpg",
       type: "Jackets",
       subtype: "Windbreaker",
       colors: ["Purple"],
@@ -1161,7 +1161,7 @@ const seeding = async () => {
     },
     {
       name: "Black leather gloves",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/black-leather-gloves.jpg",
       type: "Gloves",
       subtype: "Leather",
       colors: ["Black"],
@@ -1176,7 +1176,7 @@ const seeding = async () => {
     },
     {
       name: "Grey wool gloves",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/grey-wool-gloves.jpg",
       type: "Gloves",
       subtype: "Wool",
       colors: ["Grey"],
@@ -1191,7 +1191,7 @@ const seeding = async () => {
     },
     {
       name: "White snow gloves",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/white-snow-mittens.jpg",
       type: "Gloves",
       subtype: "Snow",
       colors: ["White"],
@@ -1206,7 +1206,7 @@ const seeding = async () => {
     },
     {
       name: "Black work gloves",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/black-working-gloves.jpg",
       type: "Gloves",
       subtype: "Work",
       colors: ["Black"],
@@ -1221,7 +1221,7 @@ const seeding = async () => {
     },
     {
       name: "Red puffer vest",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/red-puffer-vest.jpg",
       type: "Vests",
       subtype: "Puffer",
       colors: ["Red"],
@@ -1236,7 +1236,7 @@ const seeding = async () => {
     },
     {
       name: "White denim vest",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/white-denim-vest.jpg",
       type: "Vests",
       subtype: "Denim",
       colors: ["White"],
@@ -1251,7 +1251,7 @@ const seeding = async () => {
     },
     {
       name: "Olive utility vest",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/olive-utility-vest.jpg",
       type: "Vests",
       subtype: "Utility",
       colors: ["Olive"],
@@ -1266,7 +1266,7 @@ const seeding = async () => {
     },
     {
       name: "Green quilted vest",
-      imageUrl: "url_to_image",
+      imageUrl: "https://hung-up.onrender.com/client/assets/green-quilted-vest.jpg",
       type: "Vests",
       subtype: "Quilted",
       colors: ["Green"],

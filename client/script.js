@@ -1,4 +1,4 @@
-const baseURL = "http://localhost:3001"
+const baseURL = "https://hung-up.onrender.com"
 
 console.log("hello")
 
