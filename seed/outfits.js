@@ -95,7 +95,7 @@ const seeding = async () => {
       clothing: [yellowHat._id, blackTank._id, yellowSandals._id, yellowSkort._id]
     },
     {
-      imageUrl: "https://hung-up.onrender.com/assets/outfit-casual.jpg",
+      imageUrl: "https://hung-up.onrender.com/assets/outfit-casual.png",
       occasion: "Casual",
       weather: "Mild",
       favorite: true,
