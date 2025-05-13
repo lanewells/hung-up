@@ -36,7 +36,7 @@ const seeding = async () => {
     },
     {
       name: "Blue running shorts",
-      imageUrl: "https://hung-up.onrender.com/assets/blue_running_shorts.jpg",
+      imageUrl: "https://hung-up.onrender.com/assets/blue-running-shorts.jpg",
       type: "Shorts",
       subtype: "Athletic",
       colors: ["Blue"],

@@ -106,7 +106,7 @@ const seeding = async () => {
       ]
     },
     {
-      imageUrl: "https://hung-up.onrender.com/assets/outfit-country.jpg",
+      imageUrl: "https://hung-up.onrender.com/assets/outfit-country.png",
       occasion: "Weekend in the Country",
       weather: "Varied, Cloudy",
       favorite: true,
