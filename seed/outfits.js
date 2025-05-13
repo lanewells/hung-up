@@ -76,7 +76,7 @@ const seeding = async () => {
 
   const outfits = [
     {
-      imageUrl: "https://hung-up.onrender.com/client/assets/outfit-backroads.png",
+      imageUrl: "https://hung-up.onrender.com/assets/outfit-backroads.png",
       occasion: "Outdoor Bonfire",
       weather: "Starry, Cool, Evening",
       favorite: true,
@@ -88,14 +88,14 @@ const seeding = async () => {
       ]
     },
     {
-      imageUrl: "https://hung-up.onrender.com/client/assets/outfit-beach-day.png",
+      imageUrl: "https://hung-up.onrender.com/assets/outfit-beach-day.png",
       occasion: "Beach Day",
       weather: "Sunny, Warm",
       favorite: false,
       clothing: [yellowHat._id, blackTank._id, yellowSandals._id, yellowSkort._id]
     },
     {
-      imageUrl: "https://hung-up.onrender.com/client/assets/outfit-casual.jpg",
+      imageUrl: "https://hung-up.onrender.com/assets/outfit-casual.jpg",
       occasion: "Casual",
       weather: "Mild",
       favorite: true,
@@ -106,14 +106,14 @@ const seeding = async () => {
       ]
     },
     {
-      imageUrl: "https://hung-up.onrender.com/client/assets/outfit-country.jpg",
+      imageUrl: "https://hung-up.onrender.com/assets/outfit-country.jpg",
       occasion: "Weekend in the Country",
       weather: "Varied, Cloudy",
       favorite: true,
       clothing: [buckleBelt._id, blueTee._id, cowboyBoots._id, blueJeans._id, bomberJacket._id]
     },
     {
-      imageUrl: "https://hung-up.onrender.com/client/assets/outfit-formal-dinner.png",
+      imageUrl: "https://hung-up.onrender.com/assets/outfit-formal-dinner.png",
       occasion: "Formal Event",
       weather: "Cool, Indoors",
       favorite: true,
@@ -125,21 +125,21 @@ const seeding = async () => {
       ]
     },
     {
-      imageUrl: "https://hung-up.onrender.com/client/assets/outfit-date-night.png",
+      imageUrl: "https://hung-up.onrender.com/assets/outfit-date-night.png",
       occasion: "Date Night",
       weather: "Cool Evening",
       favorite: false,
       clothing: [burgundyDress._id, blushHeels._id, nudeCoat._id]
     },
     {
-      imageUrl: "https://hung-up.onrender.com/client/assets/outfit-hanging-out.jpg",
+      imageUrl: "https://hung-up.onrender.com/assets/outfit-hanging-out.jpg",
       occasion: "Casual Hanging Out",
       weather: "Sunny",
       favorite: false,
       clothing: [jeanJacket._id, redShirt._id, whiteLowtops._id, jeanShorts._id]
     },
     {
-      imageUrl: "https://hung-up.onrender.com/client/assets/outfit-jogging.png",
+      imageUrl: "https://hung-up.onrender.com/assets/outfit-jogging.png",
       occasion: "Jogging",
       weather: "Warm",
       favorite: true,
@@ -150,14 +150,14 @@ const seeding = async () => {
       ]
     },
     {
-      imageUrl: "https://hung-up.onrender.com/client/assets/outfit-picnic.png",
+      imageUrl: "https://hung-up.onrender.com/assets/outfit-picnic.png",
       occasion: "Picnic in the Park",
       weather: "Sunny",
       favorite: false,
       clothing: [pinkSkirt._id, redHalter._id, pinkPlatforms._id, whiteBlouse._id]
     },
     {
-      imageUrl: "https://hung-up.onrender.com/client/assets/outfit-snow.png",
+      imageUrl: "https://hung-up.onrender.com/assets/outfit-snow.png",
       occasion: "Snow Day",
       weather: "Snowy, Cold",
       favorite: false,
@@ -170,14 +170,14 @@ const seeding = async () => {
       ]
     },
     {
-      imageUrl: "https://hung-up.onrender.com/client/assets/outfit-sporty-casual.png",
+      imageUrl: "https://hung-up.onrender.com/assets/outfit-sporty-casual.png",
       occasion: "Rainy Day",
       weather: "Rainy, Cool, Cloudy",
       favorite: true,
       clothing: [purpleWindbreaker._id, whiteLowtops._id, blueVisor._id, greyLeggings._id, greySweater._id]
     },
     {
-      imageUrl: "https://hung-up.onrender.com/client/assets/outfit-work.jpg",
+      imageUrl: "https://hung-up.onrender.com/assets/outfit-work.jpg",
       occasion: "Work",
       weather: "Mild, Indoors",
       favorite: false,
