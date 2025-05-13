@@ -28,57 +28,51 @@ const seeding = async () => {
   const cowboyBoots = await Clothing.findOne({ name: "Brown cowboy boots" })
   const blueTee = await Clothing.findOne({ name: "Blue long sleeve tee" })
 
-
-
-
-  const orangeShorts = await Clothing.findOne({
-    name: "Orange drawstring shorts"
-  })
-  const whiteTee = await Clothing.findOne({ name: "White graphic tee" })
-  const whiteSneakers = await Clothing.findOne({
-    name: "White low-top sneakers"
-  })
-  const jeanShorts = await Clothing.findOne({ name: "Light wash jean shorts" })
-  const redTee = await Clothing.findOne({ name: "Red v-neck tee" })
-  const redSneakers = await Clothing.findOne({ name: "Red slip-on sneakers" })
-  const spandexShorts = await Clothing.findOne({ name: "Black spandex shorts" })
-  const blackRacerback = await Clothing.findOne({
-    name: "Black racerback tank"
-  })
-  const blueVisor = await Clothing.findOne({ name: "Blue visor" })
-  const blueShorts = await Clothing.findOne({
-    name: "Blue running shorts"
-  })
-
-
-
-  const khakiChinos = await Clothing.findOne({ name: "Khaki chinos" })
-  const whiteBlouse = await Clothing.findOne({
-    name: "White button-down blouse"
-  })
-  const navyBlazer = await Clothing.findOne({ name: "Navy blazer" })
-  const blackDress = await Clothing.findOne({ name: "Little black dress" })
+  const turquoiseDress = await Clothing.findOne({ name: "Turquoise bodycon dress" })
   const blackBoots = await Clothing.findOne({ name: "Black knee-high boots" })
-  const olivePants = await Clothing.findOne({ name: "Olive cargo pants" })
-  const pinkSkirt = await Clothing.findOne({ name: "Pink mini skirt" })
-  const purpleBlouse = await Clothing.findOne({ name: "Purple peplum blouse" })
-  const pinkPlatforms = await Clothing.findOne({ name: "Hot pink platforms" })
-  const leatherJacket = await Clothing.findOne({ name: "Brown leather jacket" })
-  const tealTee = await Clothing.findOne({ name: "Teal crew neck tee" })
-  const tanBirks = await Clothing.findOne({ name: "Tan birks" })
-  const oliveVest = await Clothing.findOne({ name: "Olive utility vest" })
-  const greyJoggers = await Clothing.findOne({ name: "Grey joggers" })
-  const greySneakers = await Clothing.findOne({ name: "Grey running sneakers" })
-  const purpleWindbreaker = await Clothing.findOne({
-    name: "Purple windbreaker"
-  })
+  const blackBelt = await Clothing.findOne({ name: "Black leather belt" })
+  const blackGloves = await Clothing.findOne({ name: "Black leather gloves" })
+
   const burgundyDress = await Clothing.findOne({ name: "Burgundy shift dress" })
   const blushHeels = await Clothing.findOne({ name: "Blush heels" })
   const nudeCoat = await Clothing.findOne({ name: "Nude trench coat" })
-  const greyLeggings = await Clothing.findOne({ name: "Grey leggings" })
 
+  const jeanJacket = await Clothing.findOne({ name: "Blue jean jacket" })
+  const redShirt = await Clothing.findOne({ name: "Red v-neck tee" })
+  const jeanShorts = await Clothing.findOne({ name: "Light wash jean shorts" })
+  const whiteLowtops = await Clothing.findOne({ name: "White low-top sneakers" })
+
+  const whiteTee = await Clothing.findOne({ name: "White graphic tee" })
+  const blueShorts = await Clothing.findOne({
+    name: "Blue running shorts"
+  })
+  const greySneakers = await Clothing.findOne({ name: "Grey running sneakers" })
+
+  const redHalter = await Clothing.findOne({ name: "Red halter tank" })
+  const pinkSkirt = await Clothing.findOne({ name: "Pink mini skirt" })
+  const pinkPlatforms = await Clothing.findOne({ name: "Hot pink platforms" })
+  const whiteBlouse = await Clothing.findOne({ name: "White button-down blouse" })
+
+  const redBeanie = await Clothing.findOne({ name: "Red beanie" })
+  const snowGloves = await Clothing.findOne({ name: "White snow gloves" })
   const blueBoots = await Clothing.findOne({ name: "Blue snow boots" })
   const sageCoat = await Clothing.findOne({ name: "Sage green snow coat" })
+  const greyJoggers = await Clothing.findOne({ name: "Grey joggers" })
+
+
+  const blueVisor = await Clothing.findOne({ name: "Blue visor" })
+  const greySweater = await Clothing.findOne({ name: "Grey crewneck sweater" })
+  const purpleWindbreaker = await Clothing.findOne({
+    name: "Purple windbreaker"
+  })  
+  const greyLeggings = await Clothing.findOne({ name: "Grey leggings" })
+
+  const canvasBelt = await Clothing.findOne({ name: "Off-white canvas belt" })
+  const nudeEspadrilles = await Clothing.findOne({ name: "Nude espadrilles" })
+  const marineJumpsuit = await Clothing.findOne({ name: "Marine professional jumpsuit" })
+  const navyBlazer = await Clothing.findOne({ name: "Navy blazer" })
+
+
 
   const outfits = [
     {
@@ -119,79 +113,79 @@ const seeding = async () => {
       clothing: [buckleBelt._id, blueTee._id, cowboyBoots._id, blueJeans._id, bomberJacket._id]
     },
     {
+      imageUrl: "https://hung-up.onrender.com/client/assets/outfit-formal-dinner.png",
+      occasion: "Formal Event",
+      weather: "Cool, Indoors",
+      favorite: true,
+      clothing: [
+        turquoiseDress._id,
+        blackGloves._id,
+        blackBoots._id,
+        blackBelt._id
+      ]
+    },
+    {
       imageUrl: "https://hung-up.onrender.com/client/assets/outfit-date-night.png",
       occasion: "Date Night",
-      weather: "Cool, Indoors",
-      favorite: false,
-      clothing: [
-        khakiChinos._id,
-        whiteBlouse._id,
-        greyOxfords._id,
-        navyBlazer._id
-      ]
-    },
-    {
-      imageUrl: "https://hung-up.onrender.com/client/assets/",
-      occasion: "Date Night",
       weather: "Cool Evening",
-      favorite: true,
-      clothing: [blackDress._id, blackBoots._id, leatherJacket._id]
-    },
-    {
-      imageUrl: "https://hung-up.onrender.com/client/assets/",
-      occasion: "Rainy Day Errands",
-      weather: "Rainy",
       favorite: false,
-      clothing: [olivePants._id, tealTee._id, tanBoots._id, bomberJacket._id]
-    },
-    {
-      imageUrl: "https://hung-up.onrender.com/client/assets/",
-      occasion: "Concert Night",
-      weather: "Cool",
-      favorite: true,
-      clothing: [
-        pinkSkirt._id,
-        purpleBlouse._id,
-        pinkPlatforms._id,
-        leatherJacket._id
-      ]
-    },
-    {
-      imageUrl: "https://hung-up.onrender.com/client/assets/",
-      occasion: "Picnic in the Park",
-      weather: "Sunny",
-      favorite: false,
-      clothing: [yellowSkort._id, tealTee._id, tanBirks._id, oliveVest._id]
-    },
-    {
-      imageUrl: "https://hung-up.onrender.com/client/assets/",
-      occasion: "Hiking Trip",
-      weather: "Cloudy and Cool",
-      favorite: false,
-      clothing: [
-        greyJoggers._id,
-        blueTee._id,
-        greySneakers._id,
-        purpleWindbreaker._id
-      ]
-    },
-    {
-      imageUrl: "https://hung-up.onrender.com/client/assets/",
-      occasion: "Formal Dinner",
-      weather: "Cool",
-      favorite: true,
       clothing: [burgundyDress._id, blushHeels._id, nudeCoat._id]
     },
     {
-      imageUrl: "https://hung-up.onrender.com/client/assets/",
-      occasion: "Snowy Day Out",
-      weather: "Snowy",
+      imageUrl: "https://hung-up.onrender.com/client/assets/outfit-hanging-out.jpg",
+      occasion: "Casual Hanging Out",
+      weather: "Sunny",
+      favorite: false,
+      clothing: [jeanJacket._id, redShirt._id, whiteLowtops._id, jeanShorts._id]
+    },
+    {
+      imageUrl: "https://hung-up.onrender.com/client/assets/outfit-jogging.png",
+      occasion: "Jogging",
+      weather: "Warm",
+      favorite: true,
+      clothing: [
+        blueShorts._id,
+        whiteTee._id,
+        greySneakers._id
+      ]
+    },
+    {
+      imageUrl: "https://hung-up.onrender.com/client/assets/outfit-picnic.png",
+      occasion: "Picnic in the Park",
+      weather: "Sunny",
+      favorite: false,
+      clothing: [pinkSkirt._id, redHalter._id, pinkPlatforms._id, whiteBlouse._id]
+    },
+    {
+      imageUrl: "https://hung-up.onrender.com/client/assets/outfit-snow.png",
+      occasion: "Snow Day",
+      weather: "Snowy, Cold",
       favorite: false,
       clothing: [
-        greyLeggings._id,
-        creamSweater._id,
+        redBeanie._id,
+        snowGloves._id,
+        sageCoat._id,
         blueBoots._id,
-        sageCoat._id
+        greyJoggers._id
+      ]
+    },
+    {
+      imageUrl: "https://hung-up.onrender.com/client/assets/outfit-sporty-casual.png",
+      occasion: "Rainy Day",
+      weather: "Rainy, Cool, Cloudy",
+      favorite: true,
+      clothing: [purpleWindbreaker._id, whiteLowtops._id, blueVisor._id, greyLeggings._id, greySweater._id]
+    },
+    {
+      imageUrl: "https://hung-up.onrender.com/client/assets/outfit-work.jpg",
+      occasion: "Work",
+      weather: "Mild, Indoors",
+      favorite: false,
+      clothing: [
+        canvasBelt._id,
+        nudeEspadrilles._id,
+        navyBlazer._id,
+        marineJumpsuit._id
       ]
     }
   ]
@@ -204,7 +198,9 @@ const seeding = async () => {
 }
 const runSeeding = async () => {
   await seeding()
-  db.close()
+  await db.close()
+  console.log("MongoDB connection closed.")
+  process.exit()
 }
 
 runSeeding()

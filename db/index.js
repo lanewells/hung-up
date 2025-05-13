@@ -7,10 +7,7 @@ if (!uri) {
 }
 
 mongoose
-  .connect(uri, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(uri)
   .then(() => {
     console.log("Successfully connected to MongoDB.")
   })

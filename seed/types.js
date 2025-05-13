@@ -8,7 +8,7 @@ const seeding = async () => {
   )
   const pants = (await Clothing.find({ type: "Pants" })).map((item) => item._id)
   const skirts = (await Clothing.find({ type: "Skirts" })).map(
-    (item) => item.id
+    (item) => item._id
   )
   const tees = (await Clothing.find({ type: "Tees" })).map((item) => item._id)
   const blouses = (await Clothing.find({ type: "Blouses" })).map(
@@ -225,7 +225,9 @@ const seeding = async () => {
 
 const runSeeding = async () => {
   await seeding()
-  db.close
+  await db.close()
+  console.log("MongoDB connection closed.")
+  process.exit()
 }
 
 runSeeding()
