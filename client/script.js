@@ -3,49 +3,66 @@ const baseURL = "https://hung-up.onrender.com"
 console.log("hello")
 
 // populate clothes page
-async function populateClothes() {
-  try {
-    const response = await axios.get(`${baseURL}/clothes`)
-    // const clothingItems = document.querySelectorAll(".clothes-item")
-    const clothes = response.data
 
-    // clothes template to clone - from html with placeholders
-    const clothesTemplate = document.querySelector(".clothes-item")
-    if (!clothesTemplate) {
-      console.error("Clothes template not found.")
-      return
+
+
+async function populateClothes() {
+  const params = new URLSearchParams(window.location.search)
+  const category = params.get("category")
+  let response
+
+  if (category) {
+    console.log("Category filter:", category)
+    
+    const typeRes = await axios.get(`${baseURL}/types/category/${category}`)
+    console.log("Types in category:", typeRes.data)
+    
+    const allClothingIds = typeRes.data.flatMap((type) => type.clothing)
+    console.log("Clothing IDs:", allClothingIds)
+
+    const clothingRes = await axios.post(`${baseURL}/clothes/many`, {
+      ids: allClothingIds
+    })
+
+    response = { data: clothingRes.data }
+  } else {
+    response = await axios.get(`${baseURL}/clothes`)
+  }
+
+  const clothes = response.data
+
+  const clothesTemplate = document.querySelector(".clothes-item")
+  if (!clothesTemplate) {
+    console.error("Clothes template not found.")
+    return
+  }
+
+  const clothesGrid = document.querySelector(".clothes-grid")
+  clothesGrid.innerHTML = ""
+
+  clothes.forEach((clothing) => {
+    const clonedClothing = clothesTemplate.cloneNode(true)
+    clonedClothing.style.display = "block"
+
+    clonedClothing.querySelector(".clothes-image").src = clothing.imageUrl
+    clonedClothing.querySelector(".clothes-image").alt = clothing.name || "Clothing Item"
+
+    clonedClothing.querySelector(".name-text strong").textContent = clothing.name || "Unnamed"
+    clonedClothing.querySelector(".type-text strong").textContent = `Type: ${clothing.type}` || "Unknown"
+    clonedClothing.querySelector(".subtype-text strong").textContent = `Style: ${clothing.subtype}` || "Unknown"
+    clonedClothing.querySelector(".color-text strong").textContent = `Color: ${clothing.colors}` || "No Color"
+
+    if (clothing._id) {
+      clonedClothing.setAttribute("data-id", clothing._id)
+      clonedClothing.addEventListener("click", () => {
+        window.location.href = `single-clothing.html?id=${clothing._id}`
+      })
     }
 
-    const clothesGrid = document.querySelector(".clothes-grid")
-    clothesGrid.innerHTML = ""
-
-    clothes.forEach((clothing) => {
-      const clonedClothing = clothesTemplate.cloneNode(true)
-      clonedClothing.style.display = "block"
-
-      clonedClothing.querySelector(".clothes-image").src = clothing.imageUrl
-      clonedClothing.querySelector(".clothes-image").alt = clothing.name || "Clothing Item"
-
-      clonedClothing.querySelector(".name-text strong").textContent = clothing.name || "Unnamed"
-      clonedClothing.querySelector(".type-text strong").textContent = `Type: ${clothing.type}` || "Unknown"
-      clonedClothing.querySelector(".subtype-text strong").textContent = `Style: ${clothing.subtype}` || "Unknown"
-      clonedClothing.querySelector(".color-text strong").textContent = `Color: ${clothing.colors}` || "No Color"
-      if (clothing._id) {
-        clonedClothing.setAttribute("data-id", clothing._id)
-
-        clonedClothing.addEventListener("click", () => {
-          window.location.href = `single-clothing.html?id=${clothing._id}`
-        })
-      } else {
-        console.warn("Missing _id for clothing item:", clothing)
-      }
-
-      clothesGrid.appendChild(clonedClothing)
-    })
-  } catch (error) {
-    console.error("Error fetching clothes:", error.message)
-  }
+    clothesGrid.appendChild(clonedClothing)
+  })
 }
+
 
 // set star ratings feature
 let userRatings = JSON.parse(localStorage.getItem("userRatings")) || {}
@@ -123,45 +140,47 @@ async function populateClothingDetails() {
 }
 
 
-// types page - delay closing and expanding of submenus
-document.querySelectorAll(".drawer-item").forEach((item) => {
-  let timeUp
-  item.addEventListener("mouseenter", () => {
-    clearTimeout(timeUp)
-    item.querySelector(".drawer-types").style.display = "block"
-    item.style.transform = "translateY(-10px)"
-  })
-
-  item.addEventListener("mouseleave", () => {
-    timeUp = setTimeout(() => {
-      item.querySelector(".drawer-types").style.display = "none"
-      item.style.transform = "translateY(0)"
-    }, 300)
-  })
-})
-
 // populate types page
-async function populateTypes() {
+async function populateDrawers() {
   try {
     const response = await axios.get(`${baseURL}/types`)
-    const typeButtons = document.querySelectorAll(".drawer-types p")
+    const types = response.data
 
-    typeButtons.forEach((typeButton, index) => {
-      const type = response.data.find(
-        (item) => item.type === typeButton.textContent.trim()
-      )
-      if (type) {
-        typeButton.setAttribute("data-type-name", type.type)
+    const drawers = document.querySelectorAll('.drawer')
 
-        typeButton.addEventListener("click", () => {
-          window.location.href = `clothes.html?type=${type.type}`
-        })
-      }
+    drawers.forEach((drawer) => {
+      const category = drawer.dataset.category
+      const drawerPreview = drawer.querySelector('.drawer-preview')
+
+      // find matching types for this category
+      const categoryTypes = types.filter((type) => type.category === category)
+
+      // flatten all clothing items
+      const allClothing = categoryTypes.flatMap((type) => type.clothing)
+
+      // pick 4-5 to preview
+      const previewClothing = allClothing.slice(0, 5)
+
+      previewClothing.forEach((clothingItem) => {
+        const img = document.createElement('img')
+        img.src = clothingItem.imageUrl
+        img.alt = clothingItem.name || 'Clothing item'
+        img.classList.add('drawer-thumbnail')
+        drawerPreview.appendChild(img)
+      })
+
+      // click to go to clothes.html?category=X
+  drawer.addEventListener("click", () => {
+    const category = drawer.dataset.category;
+    window.location.href = `clothes.html?category=${encodeURIComponent(category)}`
+  })
     })
   } catch (error) {
-    console.error("Error getting types:", error.message)
+    console.error('Error populating drawers:', error)
   }
 }
+
+
 
 // populate clothes page with singular type
 async function populateSingularType() {
@@ -259,16 +278,21 @@ window.onload = () => {
     populateClothingDetails()
   } else if (path.includes("clothes.html")) {
     // clothes page
-    if (window.location.search.includes("type")) {
-      // clothes page filtered by singular type
-      populateSingularType()
-    } else {
-      // general clothes page
-      populateClothes()
-    }
+
+    const searchParams = new URLSearchParams(window.location.search)
+if (searchParams.has("type")) {
+  populateSingularType()
+} else if (searchParams.has("category")) {
+  populateClothes() // handles category filtering
+} else {
+  populateClothes() // default to all clothes
+}
+
+
+
   } else if (path.includes("types.html")) {
     // types page
-    populateTypes()
+    populateDrawers()
   } else if (path.includes("outfits.html")) {
     // outfits page
     populateOutfits()

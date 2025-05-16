@@ -37,17 +37,18 @@ app.get("/outfits/daytime", outfitController.getDaytimeOutfits)
 app.get("/outfits/nighttime", outfitController.getNighttimeOutfits)
 app.get("/outfits/work", outfitController.getWorkOutfits)
 
-app.get("/clothes/:id", clothingController.getClothingById)
-app.get("/outfits/:id", outfitController.getOutfitById)
-app.get("/types/:id", typeController.getTypeById)
-
 app.get("/clothes/type/:type", clothingController.getClothesByType)
 app.get("/clothes/color/:color", clothingController.getClothesByColor)
 app.get("/types/category/:category", typeController.getTypeByCategory)
 
+app.get("/clothes/:id", clothingController.getClothingById)
+app.get("/outfits/:id", outfitController.getOutfitById)
+app.get("/types/:id", typeController.getTypeById)
+
 app.post("/clothes", clothingController.createClothing)
 app.post("/outfits", outfitController.createOutfit)
 app.post("/types", typeController.createType)
+app.post("/clothes/many", clothingController.getMultipleClothesByIds);
 app.put("/clothes/:id", clothingController.updateClothing)
 app.put("/outfits/:id", outfitController.updateOutfit)
 app.put("/types/:id", typeController.updateType)

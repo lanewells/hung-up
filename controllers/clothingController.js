@@ -29,6 +29,17 @@ const getClothingById = async (req, res) => {
   }
 }
 
+// get multiple articles of clothing by ids
+const getMultipleClothesByIds = async (req, res) => {
+  try {
+    const ids = req.body.ids
+    const clothes = await Clothing.find({ _id: { $in: ids } })
+    res.json(clothes)
+  } catch (error) {
+    res.status(500).json({ message: error.message })
+  }
+}
+
 // get clothes by type
 const getClothesByType = async (req, res) => {
   try {
@@ -44,6 +55,7 @@ const getClothesByType = async (req, res) => {
     res.status(500).json({ message: error.message })
   }
 }
+
 
 // get clothes by color
 const getClothesByColor = async (req, res) => {
@@ -108,8 +120,8 @@ module.exports = {
   getClothingById,
   getClothesByType,
   getClothesByColor,
-  // getClothesByTypeCategory,
   createClothing,
   updateClothing,
-  deleteClothing
+  deleteClothing,
+  getMultipleClothesByIds
 }
