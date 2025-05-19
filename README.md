@@ -1,10 +1,11 @@
+![Icon](/client/assets/readme/hung-up-icon.png)
 # Hung Up
 
 An application I designed to help beat decision fatigue while getting dressed.
 
 ## User Stories
 
-I created this project with the vision of an application that lets users:
+Focused on database building and backend connection, I created this project with the vision of an application that lets users:
 
 - Populate a database with their own existing articles of clothing
 - Create outfits based on those clothing items
@@ -13,10 +14,25 @@ I created this project with the vision of an application that lets users:
 
 ## Current Stage of Development 
 
-### Index Page  
+I designed the interface with scalability in mind, implementing front-end logic in JavaScript. The current layout provides a flexible foundation for connecting full CRUD functionality as additional UI components roll out.
 
+~Index~ ~page:~
+![Index Page](/client/assets/readme/index-page.png)
 
-## Early Stages 
+~Clothes~ ~page:~
+![Clothes Page](/client/assets/readme/clothes-page.png)
+
+~Outfits~ ~page:~
+![Outfits Page](/client/assets/readme/outfit-page-4.png)
+![Outfits Page](/client/assets/readme/outfit-page-3.png)
+
+~Clothes~ ~Detail~ ~page:~
+![Clothes Page](/client/assets/readme/detail-page.png)
+
+~Drawers~ ~page:~
+![Drawers Page](/client/assets/readme/drawers-page.png)
+
+## Early Stages of Development
 
 ### ERD
 
@@ -38,7 +54,9 @@ I created this project with the vision of an application that lets users:
 
 ## Goals:
 
-## Learning
+*The remaining content in this document was created in 2024 to fulfill educational curricula requirements.*
+
+## Learning 
 
 I had my own idea of what _placeholder_ meant. I implemented this in my clothes.html page for each clothing item I wanted to display. It made working with a dynamic size ranging dataset complicated and tedious.
 
@@ -122,20 +140,14 @@ Below is a small snippet of my javascript function containing cloneNode.
 
 ## Citations
 
-[Javascript.info](https://javascript.info/regexp-introduction)
-for the understanding and use of the i flag to ignore casing
+[Javascript.info](https://javascript.info/regexp-introduction) for the understanding and use of the i flag to ignore casing
 
-[Developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions)
-for the understanding and use of regular expressions and the regex operator to identify parts in a string
+[Developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions) for the understanding and use of regular expressions and the regex operator to identify parts in a string
 
-[Stackoverflow.com](https://stackoverflow.com/questions/2835140/how-do-i-link-to-part-of-a-page-hash)
-to understand how to link to a specific part of a page
+[Stackoverflow.com](https://stackoverflow.com/questions/2835140/how-do-i-link-to-part-of-a-page-hash) to understand how to link to a specific part of a page
 
-[W3schools.com](https://www.w3schools.com/icons/fontawesome_icons_intro.asp#:~:text=You%20place%20Font%20Awesome%20icons,fa%20and%20the%20icon's%20name.)
-t o learn about font awesome for css styling and icons
+[W3schools.com](https://www.w3schools.com/icons/fontawesome_icons_intro.asp#:~:text=You%20place%20Font%20Awesome%20icons,fa%20and%20the%20icon's%20name.) to learn about font awesome for css styling and icons
 
-[Developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/CSS/WebKit_Extensions)
-for specific webkit extension syntax
+[Developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/CSS/WebKit_Extensions) for specific webkit extension syntax
 
-[Developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/API/Node/cloneNode)
-to learn about clone node!
+[Developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/API/Node/cloneNode) to learn about clone node!

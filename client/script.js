@@ -4,8 +4,6 @@ console.log("hello")
 
 // populate clothes page
 
-
-
 async function populateClothes() {
   const params = new URLSearchParams(window.location.search)
   const category = params.get("category")

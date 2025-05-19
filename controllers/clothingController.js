@@ -35,6 +35,7 @@ const getMultipleClothesByIds = async (req, res) => {
     const ids = req.body.ids
     const clothes = await Clothing.find({ _id: { $in: ids } })
     res.json(clothes)
+    console.log("Received clothing IDs:", req.body.ids)
   } catch (error) {
     res.status(500).json({ message: error.message })
   }
