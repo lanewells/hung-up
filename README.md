@@ -16,20 +16,20 @@ Focused on database building and backend connection, I created this project with
 
 I designed the interface with scalability in mind, implementing front-end logic in JavaScript. The current layout provides a flexible foundation for connecting full CRUD functionality as additional UI components roll out.
 
-~Index~ ~page:~
+##### Index page:
 ![Index Page](/client/assets/readme/index-page.png)
 
-~Clothes~ ~page:~
+##### Clothes page:
 ![Clothes Page](/client/assets/readme/clothes-page.png)
 
-~Outfits~ ~page:~
+##### Outfits page:
 ![Outfits Page](/client/assets/readme/outfit-page-4.png)
 ![Outfits Page](/client/assets/readme/outfit-page-3.png)
 
-~Clothes~ ~Detail~ ~page:~
+##### Clothes detail page:
 ![Clothes Page](/client/assets/readme/detail-page.png)
 
-~Drawers~ ~page:~
+##### Drawers page:
 ![Drawers Page](/client/assets/readme/drawers-page.png)
 
 ## Early Stages of Development
