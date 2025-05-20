@@ -3,17 +3,13 @@ const Type = require("../models/type.js")
 // get all types
 const getAllTypes = async (req, res) => {
   try {
-    const types = await Type.find()
-    if (!types || types.length === 0) {
-      return res.status(404).json({
-        message: "No types found!"
-      })
-    }
+    const types = await Type.find().populate("clothing")
     res.json(types)
   } catch (error) {
     res.status(500).json({ message: error.message })
   }
 }
+
 
 // get single type by id
 const getTypeById = async (req, res) => {

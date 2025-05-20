@@ -143,6 +143,8 @@ async function populateDrawers() {
   try {
     const response = await axios.get(`${baseURL}/types`)
     const types = response.data
+    console.log("Types from API:", types)
+
 
     const drawers = document.querySelectorAll('.drawer')
 
@@ -153,8 +155,11 @@ async function populateDrawers() {
       // find matching types for this category
       const categoryTypes = types.filter((type) => type.category === category)
 
+
       // flatten all clothing items
       const allClothing = categoryTypes.flatMap((type) => type.clothing)
+      console.log("Sample clothing:", allClothing[0])
+
 
       // pick 4-5 to preview
       const previewClothing = allClothing.slice(0, 5)
