@@ -30,7 +30,14 @@ I designed the interface with scalability in mind, implementing front-end logic 
 ![Clothes Page](/client/assets/readme/detail-page.png)
 
 ##### Drawers page:
-![Drawers Page](/client/assets/readme/drawers-page.png)
+![Drawers Page](/client/assets/readme/drawers-page-1.png)
+![Drawers Page](/client/assets/readme/drawers-page-2.png)
+![Drawers Page](/client/assets/readme/drawers-page-3.png)
+
+##### Filtered clothes drawers:
+![Filtered Clothes Page](/client/assets/readme/filtered-clothes-1.png)
+![Filtered Clothes Page](/client/assets/readme/filtered-clothes-3.png)
+![Filtered Clothes Page](/client/assets/readme/filtered-clothes-2.png)
 
 ## Early Stages of Development
 
