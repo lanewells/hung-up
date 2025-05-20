@@ -263,7 +263,7 @@ const seeding = async () => {
       name: "Red v-neck tee",
       imageUrl: "https://hung-up.onrender.com/assets/red-v-neck.jpg",
       type: "Tees",
-      subtype: "V-Neck",
+      subtype: "V-neck",
       colors: ["Red"],
       size: "M",
       ratings: {
@@ -275,10 +275,10 @@ const seeding = async () => {
       workAppropriate: false
     },
     {
-      name: "Teal crew neck tee",
+      name: "Teal crewneck tee",
       imageUrl: "https://hung-up.onrender.com/assets/teal-crew-neck.jpg",
       type: "Tees",
-      subtype: "Crew neck",
+      subtype: "Crewneck",
       colors: ["Teal"],
       size: "M",
       ratings: {

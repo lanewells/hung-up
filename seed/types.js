@@ -31,7 +31,7 @@ const seeding = async () => {
     (item) => item._id
   )
   const boots = (await Clothing.find({ type: "Boots" })).map((item) => item._id)
-  const specialtyShoes = (await Clothing.find({ type: "specialtyShoes" })).map(
+  const specialtyShoes = (await Clothing.find({ type: "Specialty Shoes" })).map(
     (item) => item._id
   )
   const sandals = (await Clothing.find({ type: "Sandals" })).map(
@@ -56,8 +56,8 @@ const seeding = async () => {
         "Denim",
         "Athletic",
         "Spandex",
-        "High-Waisted",
-        "Low-Rise"
+        "High-waisted",
+        "Low-rise"
       ],
       category: "Bottoms",
       sufficient: false,
@@ -82,7 +82,7 @@ const seeding = async () => {
     },
     {
       type: "Tees",
-      subtypes: ["Graphic", "V-Neck", "Crew Neck", "Long Sleeve", "Crop"],
+      subtypes: ["Graphic", "V-neck", "Crewneck", "Long sleeve", "Crop"],
       category: "Tops",
       sufficient: false,
       necessity: 1,
@@ -90,7 +90,7 @@ const seeding = async () => {
     },
     {
       type: "Blouses",
-      subtypes: ["Button-Down", "Peplum", "Wrap", "Sleeveless", "Ruffle"],
+      subtypes: ["Button-down", "Peplum", "Wrap", "Sleeveless", "Ruffle"],
       category: "Tops",
       sufficient: false,
       necessity: 1,
@@ -115,7 +115,7 @@ const seeding = async () => {
     {
       type: "Dresses",
       subtypes: ["Shift", "Ruffle", "Little black", "Bodycon", "Slip"],
-      category: "One-Pieces",
+      category: "One-pieces",
       sufficient: true,
       necessity: 1,
       clothing: dresses
@@ -123,7 +123,7 @@ const seeding = async () => {
     {
       type: "Jumpsuits",
       subtypes: ["Romper", "Professional", "Utility", "Wide leg"],
-      category: "One-Piece",
+      category: "One-pieces",
       sufficient: true,
       necessity: 1,
       clothing: jumpsuits
@@ -131,7 +131,7 @@ const seeding = async () => {
     {
       type: "Overalls",
       subtypes: ["Denim", "Corduroy", "Shortalls"],
-      category: "One-Piece",
+      category: "One-pieces",
       sufficient: true,
       necessity: 2,
       clothing: overalls
@@ -162,7 +162,7 @@ const seeding = async () => {
     },
     {
       type: "Sandals",
-      subtypes: ["Slides", "Birks", "Flip-Flops", "Espadrilles"],
+      subtypes: ["Slides", "Birks", "Flip-flops", "Espadrilles"],
       category: "Shoes",
       sufficient: false,
       necessity: 1,
