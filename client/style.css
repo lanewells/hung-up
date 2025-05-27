@@ -710,13 +710,14 @@ footer .credits p {
   nav {
     flex-direction: column;
     align-items: center;
-    gap: 10px;
   }
 
   .start {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    padding: 0;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 5px;
   }
 
   .logo {
@@ -724,24 +725,24 @@ footer .credits p {
   }
 
   .logo img {
-    max-width: 40px;
+    max-width: 30px;
   }
 
   nav h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin: 0;
   }
 
   nav ul {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 5px;
+    gap: 3px;
     padding: 0;
   }
 
   nav ul li a {
     font-size: 14px;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem .8rem;
   }
 
   body {
@@ -783,13 +784,17 @@ footer .credits p {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding: 15px 10px;
     gap: 1rem;
   }
 
-  footer .start {
+  footer .jump {
     flex-direction: column;
-    align-items: center;
-    gap: 10px;
+    font-weight: bold;
+  }
+
+  footer .logo {
+    display: none;
   }
 
   footer ul {
@@ -798,15 +803,21 @@ footer .credits p {
     justify-content: center;
     padding: 0;
     gap: 10px;
+    margin: 0 auto;
   }
 
   footer ul li a {
-    font-size: 14px;
+    font-size: 15px;
   }
 
-  footer .credits p {
-    font-size: 12px;
-    opacity: 0.8;
-    margin-top: 5px;
+  footer .credits {
+    margin: 0
   }
+  
+  footer .credits p {
+    font-size: 13px;
+    opacity: 0.8;
+    margin: 0;
+    }
+
 }
