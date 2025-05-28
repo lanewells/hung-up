@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
 @font-face {
@@ -189,10 +188,6 @@ main {
   color: #fff;
 }
 
-/* hovering 
-----------------------------------
-----------------------------------
-*/
 .thumb:hover .hover-content {
   opacity: 1;
 }
@@ -201,6 +196,7 @@ main {
 ----------------------------------
 ----------------------------------
 */
+
 .clothes-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -361,6 +357,7 @@ main {
 ----------------------------------
 ----------------------------------
 */
+
 @media (max-width: 1024px) {
   .outfit-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -500,13 +497,11 @@ main {
   background-color: white;
 }
 
-
-
-
 /* drawers page - media query
 ----------------------------------
 ----------------------------------
 */
+
 @media (max-width: 768px) {
   .drawer-item {
     padding: 15px;
@@ -527,21 +522,26 @@ main {
 */
 
 .clothing-details {
-  display: inline-flex;
-  gap: 60px;
-  align-items: top;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+.image-container {
+  flex: 1 1 300px;
+  max-width: 600px;
 }
 
 .image-container img {
-  max-width: 600px;
+  width: 100%;
   height: auto;
-  height: 60vh;
   border-radius: 10px;
 }
 
 .details-container {
+  flex: 1 1 300px;
   max-width: 500px;
-  width: 100%;
 }
 
 .details-info div {
@@ -616,6 +616,63 @@ main {
 
 }
 
+/* clothing details page - media query
+----------------------------------
+----------------------------------
+*/
+
+@media (max-width: 768px) {
+  .clothing-details {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .image-container img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .details-container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .details-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .details-info > div {
+    flex: 1 1 45%;
+    min-width: 140px;
+    text-align: center;
+  }
+
+  .ratings {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .stars i {
+    font-size: 22px;
+  }
+
+  .back-button {
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem 1rem;
+    font-size: 15px;
+  }
+}
+
+/* footer
+----------------------------------
+----------------------------------
+*/
+
 footer {
   max-width: 100%;
   padding: 20px 30px;
@@ -647,6 +704,10 @@ footer .start {
   gap: 20px;
 }
 
+footer .jump div i {
+  display: none;
+}
+
 footer a:hover {
   text-decoration: underline var(--txt-color-dk);
 }
@@ -657,52 +718,15 @@ footer a.active {
 
 footer .credits p {
   font-size: 14px;
+  margin-left: 10px;
 }
 
-/* media query 
+/* media query 768px
 ----------------------------------
 ----------------------------------
 */
+
 @media (max-width: 768px) {
-  .column-6 {
-    flex: 0 0 100%;
-  }
-
-  .header-strip .container,
-  footer .container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .main-nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .main-nav ul li {
-    margin: 10px 0;
-  }
-
-  footer ul {
-    justify-content: center;
-  }
-
-  footer .credits {
-    text-align: center;
-    margin-top: 20px;
-    margin-left: 0;
-  }
-}
-
-
-
-
-
-/* media query mobile */
-
-
-
-@media (max-width: 600px) {
   header {
     padding: 10px;
   }
@@ -780,7 +804,7 @@ footer .credits p {
     padding: 8px 16px;
   }
 
-   footer {
+  footer {
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -792,6 +816,10 @@ footer .credits p {
     flex-direction: column;
     font-weight: bold;
   }
+
+    footer .jump div i {
+  display: contents;
+}
 
   footer .logo {
     display: none;
